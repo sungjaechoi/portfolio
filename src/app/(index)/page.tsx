@@ -10,51 +10,62 @@ export default function Home() {
         <article>
           <h2 className="hidden">포트폴리오 설명</h2>
           <section className="pb-20">
-            <div className="flex flex-col items-center pb-4 border-b-2 border-dashed">
+            <div className="flex flex-col items-center pb-4 border-b-2 border-dashed border-[#55501a]">
               <h3 className="text-center text-3xl font-thin pb-2">About Me</h3>
               <p className="text-sm px-2 py-1 text-white rounded-md"></p>
             </div>
             <div className="py-10 gap-8">
               <div>
                 <p className="pb-2">
-                  퍼블리셔로서 2년간의 경험을 통해 UI/UX 디자인, HTML, CSS,
-                  JavaScript, 크로스 브라우징, 반응형 웹 기술을 익혔습니다.
+                  퍼블리셔로서 2년간의 경험을 통해 다양한 디자이너, 프론트 엔드
+                  개발자와 협업하며, HTML, CSS, JavaScript, 크로스 브라우징,
+                  반응형 웹 기술을 익혔습니다.
+                </p>
+                <p className="pb-2">
+                  <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                    퍼블리셔에서 프론트엔드 개발자로 성장하기 위해 필요한 역량을
+                    고민하며
+                  </span>
+                  지난 1년간 코어 자바스크립트부터 시작하여
+                  <span className="text-sm p-1 mx-1 bg-[#55501a] text-white rounded-sm">
+                    React
+                  </span>
+                  <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                    Next.js
+                  </span>
+                  <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                    TypeScript
+                  </span>
+                  집중적으로 학습하고
                   <br />
-                  이후{" "}
-                  <span className="text-sm p-1 mr-1 bg-[#1d1d1f] text-white rounded-sm">
-                    &quot;퍼블리셔가 프론트엔드 개발자가 되기 위해서 필요한 것이
-                    무엇일까?&quot;
+                  Seul gallery와 Supabase_TodoList 개인 프로젝트를 통해 실무적
+                  경험을 쌓으며
+                  <span className="text-sm p-1 ml-1 bg-[#55501a] text-white rounded-sm">
+                    치열하게 준비하였습니다.
                   </span>
-                  를 생각하며 지난 1년간 치열하게 준비해 왔습니다. <br />( Git,
-                  HTML, Css, Js, React, Redux, Ts, Next, React-Query, Next api,
-                  Supabase 등 )
                 </p>
                 <p className="pb-2">
-                  <span className="text-sm p-1 mr-1 bg-[#1d1d1f] text-white rounded-sm">
-                    풀스택 투두리스트 / Pixabay API를 활용한 갤러리
+                  저는{" "}
+                  <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                    RESTfulAPI의 가치를 알며
                   </span>
-                  프로젝트를 통해 컴포넌트 기반 설계와 사용자 경험을 고려한 개발
-                  역량을 키울 수 있었습니다. <br /> 좋은 코드 가독성과 구조를
-                  만들기 위해 계속 노력하고 있습니다.
-                </p>
-                <p className="pb-2">
-                  어떤 팀에서도 빠르게 적응할 수 있는{" "}
-                  <span className="text-sm p-1 mr-1 bg-[#1d1d1f] text-white rounded-sm">
-                    유연성과 협업능력
+                  <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                    프론트엔드 중심의 테스트 코드의 중요성을 알고
                   </span>
-                  을 가지고 있습니다. 정말 열심히 준비해왔습니다.{" "}
-                  <span className="text-sm p-1 mr-1 bg-[#1d1d1f] text-white rounded-sm">
-                    이제 일하고 싶습니다. 정말 열심히 일 하고 싶습니다.{" "}
+                  <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                    팀의 목표를 최우선으로 생각하며
                   </span>
-                  팀의 목표에 헌신적인 자세로 일하고, 배우고 성장하는 자세로
-                  팀의 목표 달성에 기여하고자 합니다. 감사합니다
+                  <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                    이제 현업에서 팀원들과 함께 성장하고, 헌신하며, 좋은 제품을
+                    만들고싶습니다.
+                  </span>
                 </p>
               </div>
             </div>
           </section>
 
           <section className="pb-20">
-            <div className="flex flex-col items-center pb-4 border-b-2 border-dashed">
+            <div className="flex flex-col items-center pb-4 border-b-2 border-dashed border-[#55501a]">
               <h3 className="text-center text-3xl font-thin pb-2">Skills</h3>
             </div>
             <div className="py-10">
@@ -91,271 +102,14 @@ export default function Home() {
           </section>
 
           <section className="pb-20">
-            <div className="flex flex-col items-center pb-4 border-b-2 border-dashed">
+            <div className="flex flex-col items-center pb-4 border-b-2 border-dashed border-[#55501a]">
               <h3 className="text-center text-3xl font-thin pb-2">Projects</h3>
             </div>
             <div className="py-10">
               <ul className="flex flex-col gap-20">
                 <li className="flex gap-8 max-md:flex-col">
-                  <div className="text-2xl font-semibold basis-1/4 max-md:text-center">
-                    <span className="text-sm p-1 mr-1 bg-[#1d1d1f] text-white rounded-sm">
-                      풀스택 투두리스트
-                    </span>
-                    <p>Supabase_TodoList</p>
-                    <ul className="font-thin text-base break-all">
-                      <li>
-                        Next, TS, Prisma, Supabase, Tailwind, Context API, React
-                        Query
-                      </li>
-                      <li className="flex max-md:justify-center items-center gap-4 py-4">
-                        <Link
-                          href={
-                            "https://supabase-todolist-psi.vercel.app/auth/login"
-                          }
-                          target="_blank"
-                        >
-                          <FaLink size={30}></FaLink>
-                        </Link>
-                        <Link
-                          href={
-                            "https://github.com/sungjaechoi/supabase_todolist"
-                          }
-                          target="_blank"
-                        >
-                          <FaSquareGithub size={38}></FaSquareGithub>
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="flex flex-col gap-10 basis-3/4">
-                    <div>
-                      <div className="text-sm px-2 py-1 text-center italic">
-                        주요기능
-                      </div>
-                      <ul className="list-disc list-inside space-y-1">
-                        <li>Supabase 로그인, 회원가입 기능 활용</li>
-                        <li>회원가입 시 매직링크 인증 메일 발송 기능 구현</li>
-                        <li>
-                          Resend 메일링 서비스를 활용해 도메인 기반 메일 발송
-                        </li>
-                        <li>
-                          Context API를 사용해 유저 정보와 투두리스트 상태 전역
-                          관리
-                        </li>
-                        <li>
-                          React Query로 데이터 Fetch 및 Optimistic Update 구현
-                        </li>
-                        <li>카테고리 CRUD 및 관련된 투두 데이터 관리</li>
-                        <li>API 컨트롤러와 서비스 로직 분리 (관심사 분리)</li>
-                        <li>
-                          Skeleton UI를 적용하여 데이터 로딩 상태 시 사용자 경험
-                          개선
-                        </li>
-                        <li>버튼에 로딩 상태 추가로 작업 피드백 강화</li>
-                        <li>
-                          Semantic HTML 및 Tab Navigation을 활용한 접근성 강화
-                        </li>
-                        <li>풀 반응형 대응</li>
-                      </ul>
-                      <div>
-                        <ul className="list-disc list-inside space-y-1"></ul>
-                      </div>
-                      <div>
-                        <ul className="list-disc list-inside space-y-1"></ul>
-                      </div>
-                    </div>
-                    <div>
-                      <div className="text-sm px-2 py-1 text-center italic">
-                        트러블슈팅
-                      </div>
-                      <ul className="list-disc list-inside space-y-1">
-                        <li>
-                          <span className="text-sm p-1 mr-1 bg-[#1d1d1f] text-white rounded-sm">
-                            [문제]
-                          </span>
-                          인증 메일 발송 오류 - 회원가입 중 첫 번째 인증 메일
-                          발송은 성공했지만, 이후 다른 이메일로 가입을 시도할 때
-                          인증 메일 발송에 실패했다는 오류가 반복적으로
-                          발생했습니다.
-                        </li>
-                        <li>
-                          <span className="text-sm p-1 mr-1 bg-[#1d1d1f] text-white rounded-sm">
-                            [해결]
-                          </span>
-                          인증 메일 발송 오류 - Supabase 무료 플랜의 메일 발송
-                          한계(1시간 3회 제한)로 인해 반복적인 오류가
-                          발생했으며, Resend 메일링 서비스를 도입해 문제를
-                          해결했습니다.
-                        </li>
-
-                        <li>
-                          <span className="text-sm p-1 mr-1 bg-[#1d1d1f] text-white rounded-sm">
-                            [문제]
-                          </span>
-                          데이터 로딩 지연 - 버셀 무료 배포환경에서 수파베이스의
-                          데이터를 조회하고 응답해주는데 과도한 시간이 걸리는
-                          문제를 확인하였습니다.
-                        </li>
-
-                        <li>
-                          <span className="text-sm p-1 mr-1 bg-[#1d1d1f] text-white rounded-sm">
-                            [해결]
-                          </span>
-                          데이터 로딩 지연 - 사용자의 경험을 향상시키고 이탈률을
-                          줄이기위해 로그인 버튼 로딩 UI와 todoList의 스켈레톤
-                          UI를 추가하였습니다.
-                        </li>
-
-                        <li>
-                          <span className="text-sm p-1 mr-1 bg-[#1d1d1f] text-white rounded-sm">
-                            [문제]
-                          </span>
-                          카테고리와 Todo 연관성 - 카테고리 CRUD 구현 중,
-                          카테고리에 포함된 Todo의 업데이트 및 삭제 작업에서
-                          데이터의 일관성이 깨지는 문제가 발생했습니다. 특히,
-                          다중 작업 수행 시 일부 데이터가 누락되거나
-                          비정상적으로 처리되는 상황이 있었습니다.
-                        </li>
-
-                        <li>
-                          <span className="text-sm p-1 mr-1 bg-[#1d1d1f] text-white rounded-sm">
-                            [해결]
-                          </span>
-                          카테고리와 Todo 연관성 - Transaction을 도입하여 모든
-                          작업이 성공적으로 완료되었을 때 데이터 베이스에
-                          반영되도록 처리하여 데이터의 일관성을 보장하였습니다.
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="flex flex-col gap-5">
-                      <div className="text-sm px-2 py-1 text-center italic">
-                        회고
-                      </div>
-                      <div>
-                        <div className="font-bold mb-4">좋았던 점</div>
-                        <ul className="list-inside list-disc flex flex-col gap-2">
-                          <li>
-                            <span className="text-sm p-1 mr-1 bg-[#1d1d1f] text-white rounded-sm">
-                              [기술 검토 능력 향상]
-                            </span>
-                            갤러리 프로젝트에서 Unsplash API의 요청 제한 문제를
-                            경험하며, 기술 도입 전에 요구사항과 제한 사항을
-                            철저히 검토해야 한다는 점을 깨달았습니다. 이 경험을
-                            바탕으로 풀스택 투두리스트 프로젝트에서는 Supabase와
-                            Resend 메일링 서비스의 제한 사항을 사전에 분석해
-                            메일 발송 오류를 방지하고, 안정적인 서비스를 구현할
-                            수 있었습니다. 또한, 데이터 로딩 지연 문제에 대비해
-                            Skeleton UI와 로딩 버튼을 설계하는 등 사용자 경험을
-                            보완하기 위한 방안을 초기에 고려하며 프로젝트
-                            완성도를 높일 수 있었습니다.
-                          </li>
-                          <li>
-                            <span className="text-sm p-1 mr-1 bg-[#1d1d1f] text-white rounded-sm">
-                              [인증 및 회원가입 구현]
-                            </span>
-                            Supabase의 로그인 및 회원가입 기능을 적용하며
-                            매직링크 인증 메일 발송과 같은 실제 서비스에서
-                            사용되는 사용자 인증 흐름을 이해하고 Resend 메일링
-                            서비스와 도메인 연동 과정을 통해 도메인 기반 메일
-                            발송의 필요성과 이를 설정하는 방법을 학습했습니다.
-                          </li>
-                          <li>
-                            <span className="text-sm p-1 mr-1 bg-[#1d1d1f] text-white rounded-sm">
-                              [데이터 상태 관리 및 성능 최적화]
-                            </span>
-                            Context API로 유저 정보와 투두리스트 상태를 전역
-                            관리하며, 전역 상태 관리의 복잡성을 효과적으로
-                            줄이는 방법과 React Query를 활용해 Optimistic
-                            Update를 구현하여 사용자 경험을 고려한 실시간 UI
-                            피드백의 중요성을 깨달았습니다.
-                          </li>
-                          <li>
-                            <span className="text-sm p-1 mr-1 bg-[#1d1d1f] text-white rounded-sm">
-                              [ReactQuery 도입]
-                            </span>
-                            ReactQuery를 도입하여 프로젝트의 API 요청을
-                            캐시하고, 최적화하며 또한 낙관적업데이트를 통해
-                            사용자 경험을 향상 시킬 수있는 방법을 학습할수 있어
-                            좋았습니다.
-                          </li>
-                          <li>
-                            <span className="text-sm p-1 mr-1 bg-[#1d1d1f] text-white rounded-sm">
-                              [백엔드 컨트롤러와 서비스로직에 대한 이해]
-                            </span>
-                            이 프로젝트를 진행하며 백엔드 구성과 관련된 여러
-                            개념들을 깊이 이해하게 되었습니다. 특히 백엔드에서
-                            컨트롤러와 서비스 로직, 레이어로 나누는 구조에 대해
-                            배웠습니다. 컨트롤러는 주로 HTTP 요청을 받아 적절한
-                            서비스 로직으로 전달하는 역할을 하고, 서비스 로직은
-                            실제 비즈니스 로직을 처리하는 핵심 부분입니다. 이 두
-                            가지를 명확하게 분리함으로써 코드의 유지보수성과
-                            확장성을 크게 향상시킬 수 있다는 것을 깨달았습니다.
-                          </li>
-                          <li>
-                            <span className="text-sm p-1 mr-1 bg-[#1d1d1f] text-white rounded-sm">
-                              [데이터베이스와 ORM에 대한 이해]
-                            </span>
-                            데이터베이스와의 연동에서 ORM(Object-Relational
-                            Mapping)을 사용하면서 데이터베이스와 객체 간의
-                            변환을 자동으로 처리해주는 장점이 있었습니다. 이를
-                            통해 SQL 쿼리 작성이 간편해지고, 개발 속도를 높일 수
-                            있었지만, ORM의 사용에 따른 한계와 성능 최적화가
-                            중요한 부분임을 느끼기도 했습니다.
-                          </li>
-                          <li>
-                            <span className="text-sm p-1 mr-1 bg-[#1d1d1f] text-white rounded-sm">
-                              [트랜잭션(Transaction)에 대한 이해]
-                            </span>
-                            프로젝트를 진행하며 데이터베이스 트랜잭션을 활용한
-                            경험은 매우 유익했습니다. 특히 다중 작업이
-                            순차적으로 실행되어야 하거나 중간에 실패가 발생했을
-                            때 데이터의 무결성을 유지해야 하는 상황에서
-                            트랜잭션을 사용하여 코드의 신뢰성을 향상 시킬수
-                            있으며 한번의 연결로 여러작업을 처리함으로써
-                            네트워크 및 데이터 베이스 리소스에 효율적으로
-                            사용할수 있다는 것을 배웠습니다.
-                          </li>
-                        </ul>
-                      </div>
-                      <div>
-                        <div className="font-bold mb-4">부족했던 점</div>
-                        <ul className="list-inside list-disc flex flex-col gap-2">
-                          <li>
-                            <span className="text-sm p-1 mr-1 bg-[#1d1d1f] text-white rounded-sm">
-                              [상태 관리 도구의 초기 설계 한계]
-                            </span>
-                            Context API를 활용하여 유저 정보와 Todo 데이터를
-                            전역 관리했지만, 배포 환경에서 데이터 지연 문제가
-                            발생하면서 실시간 업데이트가 어려웠습니다. React
-                            Query로 전환하여 낙관적인 업데이트와 캐싱을
-                            도입했으나, 초기 설계에서 적합한 도구를 미리
-                            선택하지 못한 점이 아쉬웠습니다.
-                          </li>
-                        </ul>
-                      </div>
-                      <div>
-                        <div className="font-bold mb-4">
-                          부족했던 점을 개선하기 위한 방법
-                        </div>
-                        <p>
-                          초기 상태 관리 설계에서 실시간 업데이트와 데이터
-                          동기화 요구사항을 충분히 고려하지 못했던 점을 개선하기
-                          위해, 프로젝트 요구사항에 맞는 다양한 상태 관리 도구를
-                          학습하고 활용할 계획입니다. 현재는 React Query를
-                          활용해 데이터를 동기화하고 사용자 경험을 개선했으나,
-                          앞으로는 Zustand, Recoil 등 다른 도구의 장단점을
-                          학습하여, 각 도구를 상황에 맞게 적용할 수 있는 역량을
-                          키우겠습니다. 이러한 노력을 통해 설계 단계에서부터
-                          확장성과 효율성을 고려한 솔루션을 제공할 수 있는
-                          개발자가 되고자 합니다.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li className="flex gap-8 max-md:flex-col">
-                  <div className="text-2xl font-semibold  basis-1/4 max-md:text-center">
-                    <span className="text-sm p-1 mr-1 bg-[#1d1d1f] text-white rounded-sm">
+                  <div className="sticky top-[148px] h-[174px] text-2xl font-semibold  basis-1/4 max-md:text-center max-md:static">
+                    <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
                       Pixabay API를 활용한 갤러리
                     </span>
                     <p>Seul gallery</p>
@@ -406,59 +160,51 @@ export default function Home() {
                       </div>
                       <ul className="list-disc list-inside space-y-1">
                         <li>
-                          <span className="text-sm p-1 mr-1 bg-[#1d1d1f] text-white rounded-sm">
+                          <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
                             [문제]
                           </span>
-                          초기에는 Unsplash API를 사용했으나, 무료 플랜의 요청
-                          횟수 제한으로 인해 무한 스크롤 구현 과정에서 데이터
-                          페칭이 중단되는 문제가 발생했습니다.
+                          Unsplash API 사용 시, 무료 플랜의 요청 횟수 제한으로
+                          인해 무한 스크롤 구현 과정에서 데이터 페칭이 중단됨.
                         </li>
                         <li>
-                          <span className="text-sm p-1 mr-1 bg-[#1d1d1f] text-white rounded-sm">
+                          <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
                             [해결]
                           </span>
                           Pixabay API로 전환하여 높은 요청 한도와 무료 이미지
-                          제공의 장점을 활용했습니다. 전환 후, 페이징 처리 및
-                          에러 핸들링 로직을 추가로 리팩토링하여 데이터 처리의
-                          안정성을 확보하고 무한 스크롤 환경을 원활히
-                          구현했습니다.
+                          제공을 활용. 전환 후 페이징 처리 및 에러 핸들링 로직
+                          추가로 안정적인 데이터 처리를 구현.
                         </li>
                         <li>
-                          <span className="text-sm p-1 mr-1 bg-[#1d1d1f] text-white rounded-sm">
+                          <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
                             [문제]
                           </span>
-                          버셀 무료 요금제에서 제공하는 Next.js의 이미지 최적화
-                          기능(next/image)은 요청 제한이 있어 Pixabay API에서
-                          가져온 대량의 이미지에 최적화를 적용할 수 없었습니다.
+                          Vercel 무료 요금제의 Next.js 이미지 최적화
+                          기능(next/image)이 Pixabay API의 대량 이미지에 적용
+                          불가.
                         </li>
                         <li>
-                          <span className="text-sm p-1 mr-1 bg-[#1d1d1f] text-white rounded-sm">
+                          <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
                             [해결]
                           </span>
-                          next/image를 기본 img 태그로 대체하고 레이지 로딩(lazy
-                          loading) 속성을 추가하여 불필요한 네트워크 요청을
-                          줄였습니다. 동시에 로딩 지연으로 발생할 수 있는 시각적
-                          불편을 Skeleton UI를 활용해 보완함으로써 사용자 경험을
-                          개선했습니다.
+                          기본 img 태그와 레이지 로딩(lazy loading)으로 대체해
+                          불필요한 네트워크 요청을 최소화. Skeleton UI를 활용해
+                          로딩 지연 문제를 보완하며 사용자 경험 개선.
                         </li>
                         <li>
-                          <span className="text-sm p-1 mr-1 bg-[#1d1d1f] text-white rounded-sm">
+                          <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
                             [문제]
                           </span>
-                          Next.js의 패러럴 및 인터셉팅 라우팅을 활용해 모달을
-                          구현하는 과정에서, 모달 활성화 시 포커스가 모달 내부로
-                          이동하지 않고 이전 요소에 남아 있어 탭 네비게이션
-                          흐름이 깨졌습니다.
+                          Next.js의 패럴렐 및 인터셉팅 라우팅 사용 시, 모달
+                          활성화 시 포커스가 모달 내부로 이동하지 않아 접근성
+                          문제 발생.
                         </li>
                         <li>
-                          <span className="text-sm p-1 mr-1 bg-[#1d1d1f] text-white rounded-sm">
+                          <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
                             [해결]
                           </span>
-                          패러럴 라우팅의 병렬 처리 특성을 고려하여 모달의 열림
-                          상태를 감지하는 로직을 추가하고, 활성화된 요소의
-                          포커스를 저장한 뒤 모달이 닫힐 때 이를 복원하도록
-                          구현했습니다. 이를 통해 접근성을 강화하고 사용자
-                          경험을 개선했습니다.
+                          모달 열림 상태를 감지해 활성화된 요소의 포커스를
+                          저장하고 모달 종료 시 복원하는 로직 추가로 접근성과
+                          사용자 경험 개선.
                         </li>
                       </ul>
                     </div>
@@ -471,7 +217,7 @@ export default function Home() {
                           <div className="font-bold mb-4">좋았던 점</div>
                           <ul className="list-inside list-disc flex flex-col gap-2">
                             <li>
-                              <span className="text-sm p-1 mr-1 bg-[#1d1d1f] text-white rounded-sm">
+                              <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
                                 [프레임워크 심화 이해]
                               </span>
                               처음으로 Next.js를 사용해 프로젝트를 제작하며,
@@ -491,7 +237,7 @@ export default function Home() {
                               기능을 깊이 이해하게 되었습니다.
                             </li>
                             <li>
-                              <span className="text-sm p-1 mr-1 bg-[#1d1d1f] text-white rounded-sm">
+                              <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
                                 [서버와 클라이언트에 대한 이해]
                               </span>
                               Pixabay API를 활용하며 서버와 클라이언트 간 데이터
@@ -507,7 +253,7 @@ export default function Home() {
                               두었습니다.
                             </li>
                             <li>
-                              <span className="text-sm p-1 mr-1 bg-[#1d1d1f] text-white rounded-sm">
+                              <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
                                 [무한 스크롤 최적화와 클라이언트 성능 개선]
                               </span>
                               무한 스크롤을 구현하며 클라이언트 측 성능 최적화의
@@ -522,7 +268,7 @@ export default function Home() {
                               얻었습니다.
                             </li>
                             <li>
-                              <span className="text-sm p-1 mr-1 bg-[#1d1d1f] text-white rounded-sm">
+                              <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
                                 [LocalStorage를 활용한 상태 관리와 사용자 경험
                                 개선]
                               </span>
@@ -541,7 +287,7 @@ export default function Home() {
                           <div className="font-bold mb-4">부족했던 점</div>
                           <ul className="list-inside list-disc flex flex-col gap-2">
                             <li>
-                              <span className="text-sm p-1 mr-1 bg-[#1d1d1f] text-white rounded-sm">
+                              <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
                                 [기술 선택에서의 경험 부족]
                               </span>
                               초기에는 Unsplash API의 요청 횟수 제한을 충분히
@@ -555,7 +301,7 @@ export default function Home() {
                               프로젝트의 안정성을 확보해야 했습니다.
                             </li>
                             <li>
-                              <span className="text-sm p-1 mr-1 bg-[#1d1d1f] text-white rounded-sm">
+                              <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
                                 [Next.js 패러럴 및 인터셉팅 라우팅 학습 과정]
                               </span>
                               Next.js의 패러럴 및 인터셉팅 라우팅을 학습하고
@@ -588,18 +334,276 @@ export default function Home() {
                     </div>
                   </div>
                 </li>
+                <li className="flex gap-8 max-md:flex-col">
+                  <div className="sticky top-[148px] h-[174px] text-2xl font-semibold basis-1/4 max-md:text-center max-md:static">
+                    <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                      풀스택 투두리스트
+                    </span>
+                    <p>Supabase_TodoList</p>
+                    <ul className="font-thin text-base break-all">
+                      <li>
+                        Next, TS, Prisma, Supabase, Tailwind, Context API, React
+                        Query
+                      </li>
+                      <li className="flex max-md:justify-center items-center gap-4 py-4">
+                        <Link
+                          href={
+                            "https://supabase-todolist-psi.vercel.app/auth/login"
+                          }
+                          target="_blank"
+                        >
+                          <FaLink size={30}></FaLink>
+                        </Link>
+                        <Link
+                          href={
+                            "https://github.com/sungjaechoi/supabase_todolist"
+                          }
+                          target="_blank"
+                        >
+                          <FaSquareGithub size={38}></FaSquareGithub>
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="flex flex-col gap-10 basis-3/4">
+                    <div>
+                      <div className="text-sm px-2 py-1 text-center italic">
+                        주요기능
+                      </div>
+                      <ul className="list-disc list-inside space-y-1">
+                        <li>메일 인증으로 회원가입, 로그인 기능 구현</li>
+                        <li>
+                          사용자가 특정 카테고리를 선택하여 해당 카테고리에 속한
+                          투두 항목을 추가할 수 있도록 기능을 구현
+                        </li>
+                        <li>
+                          Skeleton UI를 적용하여 데이터 로딩 상태 시 사용자 경험
+                          개선
+                        </li>
+                        <li>버튼에 로딩 상태 추가로 작업 피드백 강화</li>
+                        <li>
+                          Semantic HTML 및 Tab Navigation을 활용한 접근성 강화
+                        </li>
+                        <li>풀 반응형 대응</li>
+                      </ul>
+                      <div>
+                        <ul className="list-disc list-inside space-y-1"></ul>
+                      </div>
+                      <div>
+                        <ul className="list-disc list-inside space-y-1"></ul>
+                      </div>
+                    </div>
+                    <div>
+                      <div className="text-sm px-2 py-1 text-center italic">
+                        트러블슈팅
+                      </div>
+                      <ul className="list-disc list-inside space-y-1">
+                        <li>
+                          <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                            [문제]
+                          </span>
+                          Supabase 무료 플랜의 메일 발송 제한(1시간 3회
+                          제한)으로 인해, 이메일 인증 제한 발생
+                        </li>
+                        <li>
+                          <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                            [해결]
+                          </span>
+                          Resend 메일링 서비스를 도입해 안정적인 메일 발송
+                          환경을 구축
+                        </li>
+                        <li>
+                          <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                            [문제]
+                          </span>
+                          버셀 무료 배포 환경에서 Supabase 데이터를 조회하고
+                          응답받는 데 과도한 시간으로 사용자 경험 저하
+                        </li>
+
+                        <li>
+                          <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                            [해결]
+                          </span>
+                          버셀 서버 지역을 변경하여 데이터 로딩 속도를 개선하고,
+                          React Query를 활용해 낙관적 업데이트를 적용하여 실시간
+                          데이터 반영 속도를 향상시켰습니다. 또한, Skeleton UI와
+                          버튼 로딩 UI를 추가해 로딩 시간을 시각적으로 보완하여
+                          사용자 경험을 최적화했습니다.
+                        </li>
+
+                        <li>
+                          <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                            [문제]
+                          </span>
+                          카테고리와 Todo 데이터 동기화 문제 발생. 특히,
+                          카테고리 CRUD 작업 중 카테고리에 포함된 Todo의
+                          업데이트 및 삭제 작업에서 데이터의 일관성이 깨지는
+                          상황 발생.
+                        </li>
+
+                        <li>
+                          <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                            [해결]
+                          </span>
+                          Transaction을 도입해 모든 작업이 성공적으로 완료되었을
+                          때 데이터베이스에 반영되도록 구현하여 데이터의
+                          일관성을 보장.
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="flex flex-col gap-5">
+                      <div className="text-sm px-2 py-1 text-center italic">
+                        회고
+                      </div>
+                      <div>
+                        <div className="font-bold mb-4">좋았던 점</div>
+                        <ul className="list-inside list-disc flex flex-col gap-2">
+                          <li>
+                            <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                              [기술 검토 능력 향상]
+                            </span>
+                            갤러리 프로젝트에서 Unsplash API의 요청 제한 문제를
+                            경험하며, 기술 도입 전에 요구사항과 제한 사항을
+                            철저히 검토해야 한다는 점을 깨달았습니다. 이 경험을
+                            바탕으로 풀스택 투두리스트 프로젝트에서는 Supabase와
+                            Resend 메일링 서비스의 제한 사항을 사전에 분석해
+                            메일 발송 오류를 방지하고, 안정적인 서비스를 구현할
+                            수 있었습니다. 또한, 데이터 로딩 지연 문제에 대비해
+                            Skeleton UI와 로딩 버튼을 설계하는 등 사용자 경험을
+                            보완하기 위한 방안을 초기에 고려하며 프로젝트
+                            완성도를 높일 수 있었습니다.
+                          </li>
+                          <li>
+                            <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                              [인증 및 회원가입 구현]
+                            </span>
+                            Supabase의 로그인 및 회원가입 기능을 적용하며
+                            매직링크 인증 메일 발송과 같은 실제 서비스에서
+                            사용되는 사용자 인증 흐름을 이해하고 Resend 메일링
+                            서비스와 도메인 연동 과정을 통해 도메인 기반 메일
+                            발송의 필요성과 이를 설정하는 방법을 학습했습니다.
+                          </li>
+                          <li>
+                            <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                              [데이터 상태 관리 및 성능 최적화]
+                            </span>
+                            Context API로 유저 정보와 투두리스트 상태를 전역
+                            관리하며, 전역 상태 관리의 복잡성을 효과적으로
+                            줄이는 방법과 React Query를 활용해 Optimistic
+                            Update를 구현하여 사용자 경험을 고려한 실시간 UI
+                            피드백의 중요성을 깨달았습니다.
+                          </li>
+                          <li>
+                            <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                              [ReactQuery 도입]
+                            </span>
+                            ReactQuery를 도입하여 프로젝트의 API 요청을
+                            캐시하고, 최적화하며 또한 낙관적업데이트를 통해
+                            사용자 경험을 향상 시킬 수있는 방법을 학습할수 있어
+                            좋았습니다.
+                          </li>
+                          <li>
+                            <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                              [백엔드 컨트롤러와 서비스로직에 대한 이해]
+                            </span>
+                            이 프로젝트를 진행하며 백엔드 구성과 관련된 여러
+                            개념들을 깊이 이해하게 되었습니다. 특히 백엔드에서
+                            컨트롤러와 서비스 로직, 레이어로 나누는 구조에 대해
+                            배웠습니다. 컨트롤러는 주로 HTTP 요청을 받아 적절한
+                            서비스 로직으로 전달하는 역할을 하고, 서비스 로직은
+                            실제 비즈니스 로직을 처리하는 핵심 부분입니다. 이 두
+                            가지를 명확하게 분리함으로써 코드의 유지보수성과
+                            확장성을 크게 향상시킬 수 있다는 것을 깨달았습니다.
+                          </li>
+                          <li>
+                            <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                              [데이터베이스와 ORM에 대한 이해]
+                            </span>
+                            데이터베이스와의 연동에서 ORM(Object-Relational
+                            Mapping)을 사용하면서 데이터베이스와 객체 간의
+                            변환을 자동으로 처리해주는 장점이 있었습니다. 이를
+                            통해 SQL 쿼리 작성이 간편해지고, 개발 속도를 높일 수
+                            있었지만, ORM의 사용에 따른 한계와 성능 최적화가
+                            중요한 부분임을 느끼기도 했습니다.
+                          </li>
+                          <li>
+                            <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                              [트랜잭션(Transaction)에 대한 이해]
+                            </span>
+                            프로젝트를 진행하며 데이터베이스 트랜잭션을 활용한
+                            경험은 매우 유익했습니다. 특히 다중 작업이
+                            순차적으로 실행되어야 하거나 중간에 실패가 발생했을
+                            때 데이터의 무결성을 유지해야 하는 상황에서
+                            트랜잭션을 사용하여 코드의 신뢰성을 향상 시킬수
+                            있으며 한번의 연결로 여러작업을 처리함으로써
+                            네트워크 및 데이터 베이스 리소스에 효율적으로
+                            사용할수 있다는 것을 배웠습니다.
+                          </li>
+                          <li>
+                            <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                              [서버 지역 선택과 네트워크 성능 최적화에 대한
+                              이해]
+                            </span>
+                            이 프로젝트를 진행하며 서버의 지역 간 거리와
+                            네트워크 요청 간에 발생할 수 있는 성능 문제를
+                            고려하는 것이 중요하다는 점을 깨달았습니다. 특히,
+                            Vercel과 Supabase를 활용하면서 데이터 요청 및 응답
+                            속도가 서버 지역 설정에 따라 큰 영향을 받는다는 것을
+                            경험했습니다. 이러한 문제를 해결하기 위해 적절한
+                            서버 지역을 선택하여 네트워크 지연 시간을 줄이고,
+                            사용자 경험을 개선하는 데 성공했습니다. 이 과정을
+                            통해 서버 지역과 네트워크 성능 최적화의 중요성을
+                            학습 했습니다.
+                          </li>
+                        </ul>
+                      </div>
+                      <div>
+                        <div className="font-bold mb-4">부족했던 점</div>
+                        <ul className="list-inside list-disc flex flex-col gap-2">
+                          <li>
+                            <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                              [상태 관리 도구의 초기 설계 한계]
+                            </span>
+                            Context API를 활용하여 유저 정보와 Todo 데이터를
+                            전역 관리했지만, 배포 환경에서 데이터 지연 문제가
+                            발생하면서 실시간 업데이트가 어려웠습니다. React
+                            Query로 전환하여 낙관적인 업데이트와 캐싱을
+                            도입했으나, 초기 설계에서 적합한 도구를 미리
+                            선택하지 못한 점이 아쉬웠습니다.
+                          </li>
+                        </ul>
+                      </div>
+                      <div>
+                        <div className="font-bold mb-4">
+                          부족했던 점을 개선하기 위한 방법
+                        </div>
+                        <p>
+                          초기 상태 관리 설계에서 실시간 업데이트와 데이터
+                          동기화 요구사항을 충분히 고려하지 못했던 점을 개선하기
+                          위해, 프로젝트 요구사항에 맞는 상태 관리 전략을
+                          지속적으로 학습하고 활용할 계획입니다. 현재는 React
+                          Query를 활용해 데이터를 동기화하고 사용자 경험을
+                          개선했습니다. 앞으로도 상황에 맞는 최적의 도구와
+                          방식을 적용할 수 있도록 노력하여 설계 단계에서부터
+                          확장성과 효율성을 고려한 솔루션을 제공할 수 있는
+                          개발자가 되고자 합니다.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
               </ul>
             </div>
           </section>
 
           <section className="pb-20">
-            <div className="flex flex-col items-center pb-4 border-b-2 border-dashed">
+            <div className="flex flex-col items-center pb-4 border-b-2 border-dashed border-[#55501a]">
               <h3 className="text-center text-3xl font-thin pb-2">Career</h3>
             </div>
             <div className="py-10">
               <div className="flex flex-col gap-10">
                 <div className="flex gap-8 max-md:flex-col">
-                  <div className="text-2xl font-semibold  basis-1/4 max-md:text-center">
+                  <div className="sticky top-[148px] h-[174px] text-2xl font-semibold  basis-1/4 max-md:text-center max-md:static">
                     <p>(주)하이브랩</p>
                     <ul className="font-thin text-base">
                       <li>2021.09 - 2023.11</li>
@@ -756,7 +760,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="mt-20 text-center text-sm px-2 py-1 bg-[#1d1d1f] text-white rounded-md">
+              <div className="mt-20 text-center text-sm px-2 py-1 bg-[#55501a] text-white rounded-md">
                 앞으로 이곳을 함께 채워나가고 싶어요.
               </div>
             </div>

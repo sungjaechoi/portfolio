@@ -12,7 +12,7 @@ function Header() {
   };
 
   return (
-    <header className="flex max-md:flex-col max-md:text-center justify-between py-10 sticky top-0 z-50 bg-white ">
+    <header className="flex max-md:flex-col max-md:text-center justify-between py-10 sticky top-0 z-50 bg-[#e9e8df] ">
       <div>
         <h1 className="text-4xl">최성재</h1>
         <p className="text-xl font-thin">프론트엔드 엔지니어</p>
