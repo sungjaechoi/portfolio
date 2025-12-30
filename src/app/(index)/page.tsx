@@ -1,7 +1,6 @@
 import Link from "next/link";
 import TopButton from "./components/top-button";
 import { FaLink } from "react-icons/fa";
-import { FaSquareGithub } from "react-icons/fa6";
 
 export default function Home() {
   return (
@@ -17,53 +16,41 @@ export default function Home() {
             <div className="py-10 gap-8">
               <div>
                 <p className="pb-2">
-                  퍼블리셔로서 2년간의 경험을 통해 다양한 디자이너, 프론트 엔드
-                  개발자와 협업하며, HTML, CSS, JavaScript, 크로스 브라우징,
-                  반응형 웹 기술을 익혔습니다.
-                </p>
-                <p className="pb-2">
-                  <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
-                    퍼블리셔에서 프론트엔드 개발자로 성장하기 위해 필요한 역량을
-                    고민하며
-                  </span>
-                  지난 1년간 코어 자바스크립트부터 시작하여
-                  <span className="text-sm p-1 mx-1 bg-[#55501a] text-white rounded-sm">
-                    React
-                  </span>
-                  <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
-                    Next.js
-                  </span>
-                  <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
-                    TypeScript
-                  </span>
-                  집중적으로 학습하고
+                  웹 표준·접근성을 기반으로 UI를 구현해온 경험을 바탕으로,
+                  React/Next.js와 TypeScript 환경에서 프론트엔드 개발을
+                  해왔습니다.
                   <br />
-                  Seul gallery와 Supabase_TodoList 개인 프로젝트를 통해 실무적
-                  경험을 쌓으며
-                  <span className="text-sm p-1 ml-1 bg-[#55501a] text-white rounded-sm">
-                    치열하게 준비하였습니다.
-                  </span>
+                  컴포넌트 설계와 상태 관리, API 연동을 기본으로 하되, 성능
+                  최적화와 테스트·문서화를 함께 적용해 제품 품질과 개발 생산성을
+                  높이는 데 집중합니다.
                 </p>
                 <p className="pb-2">
-                  저는{" "}
-                  <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
-                    RESTfulAPI의 가치를 알며
-                  </span>
-                  <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
-                    프론트엔드 중심의 테스트 코드의 중요성을 알고
-                  </span>
-                  <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
-                    팀의 목표를 최우선으로 생각하며
-                  </span>
-                  <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
-                    이제 현업에서 팀원들과 함께 성장하고, 헌신하며, 좋은 제품을
-                    만들고싶습니다.
-                  </span>
+                  현재 리턴플러스에서 Next.js 15 기반의 프론트엔드 3개
+                  프로젝트(홈페이지·WebView 앱·관리자 대시보드)를 아키텍처
+                  설계부터 기능 개발까지 리딩하고 있습니다.
+                  <br />
+                  이미지·폰트 최적화로 로딩 성능을 개선했고,
+                  메타데이터·JSON-LD·사이트맵 등 SEO 요소를 적용해 검색 친화적
+                  구조를 구축했습니다. 또한 권한/라우팅을 역할 기준으로
+                  설계하고, 관리자에서는 TanStack Table 기반 데이터 테이블을
+                  구현해 운영에 필요한 화면을 안정적으로 제공했습니다.
+                </p>
+                <p className="pb-2">
+                  Claude Code를 활용해 LLM 기반 개발 워크플로우를 설계·운영하며,
+                  요구사항을 구조화해 작업 단계를 분해하고(분석→설계→구현→검증),
+                  역할이 다른 에이전트들을 조율해 일관된 산출물이 나오도록
+                  관리합니다.
+                  <br />
+                  특히 자동 검증과 피드백 루프를 통해 품질 기준을 반복적으로
+                  만족시키는 방식으로, 코드 생성에 그치지 않고 “프로세스”를
+                  자동화해 개발 생산성과 결과 품질을 안정적으로 끌어올리는 데
+                  강점이 있습니다.
                 </p>
               </div>
             </div>
           </section>
-
+          {/* LLM 스킬 추가 */}
+          {/* 주로 사용하는 LLM은 클로드 코드이이며, 블라블라, 서브에이전트 및 피드백 루트 블라브라,  */}
           <section className="pb-20">
             <div className="flex flex-col items-center pb-4 border-b-2 border-dashed border-[#55501a]">
               <h3 className="text-center text-3xl font-thin pb-2">Skills</h3>
@@ -72,29 +59,44 @@ export default function Home() {
               <ul className="flex flex-col gap-10">
                 <li className="flex gap-8 max-md:flex-col">
                   <div className="text-2xl font-semibold basis-1/4 max-md:text-center">
-                    Frontend
+                    Core
                   </div>
                   <ul className="list-disc list-inside space-y-1 basis-3/4">
-                    <li>HTML</li>
-                    <li>CSS ( SCSS, StyledComponents, Tailwind ) </li>
-                    <li>JavaScript ( ES6 ~ )</li>
-                    <li>TypeScript</li>
                     <li>
-                      React ( Context API, Redux, React Query, React Hook Form
-                      ... )
+                      React, Next.js (App Router), TypeScript, Tailwind, Zustand
                     </li>
-                    <li>Next ( App Router )</li>
-                    <li>AWS EC2</li>
-                    <li>Docker</li>
                   </ul>
                 </li>
                 <li className="flex gap-8 max-md:flex-col">
                   <div className="text-2xl font-semibold basis-1/4 max-md:text-center">
-                    Backend
+                    Production Experience
                   </div>
                   <ul className="list-disc list-inside space-y-1 basis-3/4">
-                    <li>Prisma</li>
-                    <li>Supabase</li>
+                    <li>
+                      TanStack Table, Framer Motion/GSAP, React Hook Form,
+                      Axios, Storybook, Jest/RTL
+                    </li>
+                  </ul>
+                </li>
+                <li className="flex gap-8 max-md:flex-col">
+                  <div className="text-2xl font-semibold basis-1/4 max-md:text-center">
+                    Familiar
+                  </div>
+                  <ul className="list-disc list-inside space-y-1 basis-3/4">
+                    <li>
+                      Redux, SCSS, Styled-components, Supabase, Prisma, Docker
+                    </li>
+                  </ul>
+                </li>
+                <li className="flex gap-8 max-md:flex-col">
+                  <div className="text-2xl font-semibold basis-1/4 max-md:text-center">
+                    LLM Workflow
+                  </div>
+                  <ul className="list-disc list-inside space-y-1 basis-3/4">
+                    <li>
+                      Claude Code, OpenAI, Prompt Engineering(Cookbook),
+                      Sub-agent(Feedback Loop)
+                    </li>
                   </ul>
                 </li>
               </ul>
@@ -107,7 +109,725 @@ export default function Home() {
             </div>
             <div className="py-10">
               <ul className="flex flex-col gap-20">
+                {/* 한조각 홈페이지 */}
                 <li className="flex gap-8 max-md:flex-col">
+                  <div className="sticky top-[148px] h-[174px] text-2xl font-semibold basis-1/4 max-md:text-center max-md:static">
+                    <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                      의료기기 투자 플랫폼
+                    </span>
+                    <p>한조각 홈페이지</p>
+                    <ul className="font-thin text-base break-all">
+                      <li>Next.js 15, React 19, TypeScript, Tailwind CSS 4</li>
+                      <li className="flex max-md:justify-center items-center gap-4 py-4">
+                        <Link
+                          href={"https://home.hanjogak.co.kr"}
+                          target="_blank"
+                        >
+                          <FaLink size={30}></FaLink>
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="flex flex-col gap-10 basis-3/4">
+                    <div>
+                      <div className="text-sm px-2 py-1 text-center italic">
+                        주요 기능
+                      </div>
+                      <ul className="list-disc list-inside space-y-1">
+                        <li>
+                          GSAP ScrollTrigger 활용 시네마틱 스크롤 애니메이션
+                          (9개 섹션)
+                        </li>
+                        <li>
+                          Zustand 기반 다단계 본인인증 시스템 (KCP PASS 연동)
+                        </li>
+                        <li>
+                          동적 메타데이터, JSON-LD, Sitemap.xml 서버사이드 SEO
+                        </li>
+                        <li>
+                          Sharp/AVIF 이미지 최적화 (75% 감소), 폰트 서브셋
+                          자동화 (70% 감소)
+                        </li>
+                      </ul>
+                    </div>
+                    <div>
+                      <div className="text-sm px-2 py-1 text-center italic">
+                        트러블슈팅
+                      </div>
+                      <ul className="list-disc list-inside space-y-1">
+                        <li>
+                          <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                            [문제]
+                          </span>
+                          이미지 파일 용량 과다(평균 3.2MB), Pretendard 폰트
+                          2MB로 초기 로딩 시간 평균 3-5초 소요
+                        </li>
+                        <li>
+                          <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                            [해결]
+                          </span>
+                          Sharp를 활용한 WebP/AVIF 자동 변환 스크립트,
+                          subset-font로 폰트 서브셋 자동 생성. 이미지 75%
+                          감소(800KB), 폰트 70% 감소(600KB). 이미지/폰트
+                          최적화로 모바일(4G) 기준 초기 로딩 체감 시간을 약 5초
+                          → 1.5초로 단축했고, 프로덕션 Lighthouse 성능 점수를 72
+                          → 95로 개선했습니다
+                        </li>
+                        <li>
+                          <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                            [문제]
+                          </span>
+                          KCP PASS 본인인증 iframe 통신 시 인증 완료 후 부모
+                          창으로 결과 전달 안 됨, 회원가입 중단
+                        </li>
+                        <li>
+                          <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                            [해결]
+                          </span>
+                          postMessage 이벤트 리스너 등록, Origin 검증 로직 추가,
+                          클린업 함수로 메모리 누수 방지. iOS/Android
+                          WebView에서 인증 결과 전달 정상화
+                        </li>
+                        <li>
+                          <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                            [문제]
+                          </span>
+                          검색엔진이 SPA 동적 콘텐츠 크롤링 실패, 네이버/구글
+                          검색 결과 미노출
+                        </li>
+                        <li>
+                          <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                            [해결]
+                          </span>
+                          Next.js Metadata API로 서버사이드 메타데이터 생성,
+                          JSON-LD 구조화 데이터 구현, 동적 Sitemap.xml 자동
+                          생성. 구글 &quot;한조각&quot; 브랜드명 검색 시 상위
+                          노출 (Search Console 기준, 2025년 10월)
+                        </li>
+                      </ul>
+                    </div>
+                    <div>
+                      <div className="text-sm px-2 py-1 text-center italic">
+                        성과
+                      </div>
+                      <ul className="list-disc list-inside space-y-1">
+                        <li>
+                          초기 화면에 필요한 핵심 데이터는 서버에서
+                          렌더링(SSR/RSC)하여 첫 로딩을 안정함
+                        </li>
+                        <li>Lighthouse SEO 점수 95/100</li>
+                        <li>
+                          구글 &quot;한조각&quot; 브랜드명 검색 시 상위 노출
+                          (Search Console 기준, 2025년 10월)
+                        </li>
+                      </ul>
+                    </div>
+                    <div>
+                      <div className="flex flex-col gap-5">
+                        <div className="text-sm px-2 py-1 text-center italic">
+                          회고
+                        </div>
+                        <div>
+                          <div className="font-bold mb-4">배운 점</div>
+                          <ul className="list-inside list-disc flex flex-col gap-2">
+                            <li>
+                              <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                                [GSAP ScrollTrigger의 강력함]
+                              </span>
+                              scrub 옵션으로 부드러운 스크롤 동기화, 60fps
+                              애니메이션 구현
+                            </li>
+                            <li>
+                              <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                                [성능 최적화의 중요성]
+                              </span>
+                              번들 크기 50% 감소로 TTI 34% 개선, 이미지 최적화가
+                              LCP에 큰 영향
+                            </li>
+                            <li>
+                              <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                                [Next.js 15 App Router]
+                              </span>
+                              Server Component로 초기 로딩 속도 향상, 동적
+                              메타데이터로 SEO 최적화
+                            </li>
+                            <li>
+                              <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                                [Zustand의 효율성]
+                              </span>
+                              Redux보다 간결한 문법, 번들 크기 최소(1KB), 복잡한
+                              다단계 폼 상태 관리에 적합
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                {/* 한조각 앱 */}
+                <li className="flex gap-8 max-md:flex-col">
+                  <div className="sticky top-[148px] h-[174px] text-2xl font-semibold basis-1/4 max-md:text-center max-md:static">
+                    <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                      WebView 기반 모바일 앱
+                    </span>
+                    <p>한조각 앱</p>
+                    <ul className="font-thin text-base break-all">
+                      <li>Next.js 15, Zustand, Framer Motion, Recharts</li>
+                      <li className="flex max-md:justify-center items-center gap-4 py-4">
+                        <Link
+                          href={
+                            "https://play.google.com/store/apps/details?id=kr.returnplus.hanjogak"
+                          }
+                          target="_blank"
+                        >
+                          <FaLink size={30}></FaLink>
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="flex flex-col gap-10 basis-3/4">
+                    <div>
+                      <div className="text-sm px-2 py-1 text-center italic">
+                        주요 기능
+                      </div>
+                      <ul className="list-disc list-inside space-y-1">
+                        <li>
+                          KCP PASS 본인인증, 간편 로그인 (PIN), 생체 인증
+                          (WebView Bridge)
+                        </li>
+                        <li>
+                          투자 모집중 상품 관리, 상세 페이지, 투자하기, 결제
+                        </li>
+                        <li>
+                          마이페이지 (투자 현황, 배당금, 입출금 내역, 계좌 관리)
+                        </li>
+                        <li>1대1 문의, FAQ, 공지사항, 알림 센터 (푸시 알림)</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <div className="text-sm px-2 py-1 text-center italic">
+                        트러블슈팅
+                      </div>
+                      <ul className="list-disc list-inside space-y-1">
+                        <li>
+                          <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                            [문제]
+                          </span>
+                          Next.js의 서버사이드와 클라이언트사이드에서 API
+                          baseURL이 달라야 하는 문제 (서버는 직접 백엔드 호출,
+                          브라우저는 CORS 우회 필요)
+                        </li>
+                        <li>
+                          <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                            [해결]
+                          </span>
+                          getBaseURL() 함수로 환경 자동 감지, 서버사이드는 직접
+                          백엔드 URL(NEXT_PUBLIC_API_BASE_URL) 사용,
+                          클라이언트는 Next.js rewrites를 통한 /api 프록시 사용.
+                          Axios 인터셉터로 헤더 자동 추가 및 응답 데이터 unwrap
+                          처리
+                        </li>
+                        <li>
+                          <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                            [문제]
+                          </span>
+                          iOS/Android 모바일 브라우저에서 키보드가 올라올 때
+                          하단 고정 버튼이 가려져 사용자가 조작 불가
+                        </li>
+                        <li>
+                          <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                            [해결]
+                          </span>
+                          visualViewport API를 활용한 실시간 키보드 높이 감지
+                          커스텀 훅(useKeyboardHeight) 구현. window.innerHeight
+                          - visualViewport.height로 키보드 높이 계산,
+                          FixedBottomContainer 컴포넌트에서 bottom 스타일 동적
+                          조정. Safe Area와 키보드 높이를 max() 함수로 병합 처리
+                        </li>
+                        <li>
+                          <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                            [문제]
+                          </span>
+                          본인인증(X-ENCRYPTED-AUTH) → 로그인(AUTH-TOKEN) 2단계
+                          인증 시스템에서 각 페이지별 접근 권한이 달라 라우팅
+                          로직이 복잡해짐
+                        </li>
+                        <li>
+                          <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                            [해결]
+                          </span>
+                          Next.js middleware로 서버사이드 인증 검증 및 자동
+                          리다이렉트 구현. 쿠키 기반 인증 상태 확인 후 미인증은
+                          /auth, 본인인증만 완료는 /auth/login, 전체 인증 완료는
+                          정상 접근. 게스트 모드(/auth/guest) 별도 처리
+                        </li>
+                        <li>
+                          <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                            [문제]
+                          </span>
+                          다른 디바이스에서 중복 로그인 시 기존 세션이 유지되어
+                          보안 이슈 발생
+                        </li>
+                        <li>
+                          <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                            [해결]
+                          </span>
+                          Axios 응답 인터셉터에서 duplicated_login 플래그 감지
+                          시 모든 쿠키 자동 삭제, 로그인 페이지로 강제
+                          리다이렉트. 클라이언트사이드에서 자동 처리되어 사용자
+                          혼란 최소화
+                        </li>
+                        <li>
+                          <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                            [문제]
+                          </span>
+                          Flutter WebView와 웹 간 양방향 통신 시 타입 안정성
+                          부재, 액션별로 다른 payload/response 타입 관리 어려움
+                        </li>
+                        <li>
+                          <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                            [해결]
+                          </span>
+                          TypeScript 조건부 타입(PayloadByAction&lt;T&gt;,
+                          ResponseByAction&lt;T&gt;)으로 액션별 타입 자동 추론
+                          구현. 함수 오버로딩으로 각 액션(toFlutterBio,
+                          toFlutterRegister 등)마다 정확한 타입 체크.
+                          requestFlutterData() 함수 하나로 모든 브릿지 통신 타입
+                          안전하게 처리
+                        </li>
+                      </ul>
+                    </div>
+                    <div>
+                      <div className="text-sm px-2 py-1 text-center italic">
+                        성과
+                      </div>
+                      <ul className="list-disc list-inside space-y-1">
+                        <li>
+                          getBaseURL() 함수로 SSR/CSR 환경 자동 감지, API 통신
+                          에러율 0% 달성
+                        </li>
+                        <li>
+                          middleware 기반 인증 상태 검증으로 잘못된 페이지 접근
+                          방지, 라우팅 정확도 100%
+                        </li>
+                        <li>
+                          Axios 인터셉터로 duplicated_login 플래그 감지 시 자동
+                          세션 정리, 보안 강화
+                        </li>
+                      </ul>
+                    </div>
+                    <div>
+                      <div className="flex flex-col gap-5">
+                        <div className="text-sm px-2 py-1 text-center italic">
+                          회고
+                        </div>
+                        <div>
+                          <div className="font-bold mb-4">배운 점</div>
+                          <ul className="list-inside list-disc flex flex-col gap-2">
+                            <li>
+                              <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                                [WebView 통신의 이해]
+                              </span>
+                              iOS와 Android의 Bridge API 차이 학습, 플랫폼별
+                              예외 처리의 중요성
+                            </li>
+                            <li>
+                              <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                                [Framer Motion을 활용한 고성능 애니메이션]
+                              </span>
+                              AnimatePresence와 z-index 동적 할당으로 여러
+                              페이지가 스택처럼 쌓이는 네이티브 앱 전환 효과
+                              구현, 60fps 부드러운 슬라이드 애니메이션으로 웹과
+                              앱의 경계 제거
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                {/* ReturnPlus STO 관리자 대시보드 */}
+                <li className="flex gap-8 max-md:flex-col">
+                  <div className="sticky top-[148px] h-[174px] text-2xl font-semibold basis-1/4 max-md:text-center max-md:static">
+                    <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                      백오피스 관리 시스템
+                    </span>
+                    <p>관리자 대시보드</p>
+                    <ul className="font-thin text-base break-all">
+                      <li>Next.js 15, TanStack Table, Lexical, Recharts</li>
+                    </ul>
+                  </div>
+                  <div className="flex flex-col gap-10 basis-3/4">
+                    <div>
+                      <div className="text-sm px-2 py-1 text-center italic">
+                        주요 기능
+                      </div>
+                      <ul className="list-disc list-inside space-y-1">
+                        <li>
+                          권한 기반 멀티 대시보드 (중앙, 병원, 장비 관리자)
+                        </li>
+                        <li>
+                          TanStack Table v8 고급 데이터 테이블 (서버사이드
+                          페이지네이션, 컬럼 리사이징)
+                        </li>
+                        <li>Lexical Rich Text 에디터 (약관, 뉴스, FAQ 작성)</li>
+                        <li>
+                          Recharts 대시보드 시각화 (KPI 카드, 투자 트렌드, 파이
+                          차트)
+                        </li>
+                        <li>31개 모듈화된 API Hooks, 10개 이상 도메인 관리</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <div className="text-sm px-2 py-1 text-center italic">
+                        트러블슈팅
+                      </div>
+                      <ul className="list-disc list-inside space-y-1">
+                        <li>
+                          <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                            [문제]
+                          </span>
+                          중앙 관리자, 병원 관리자, 장비 관리자 등 3가지 권한에
+                          따라 서로 다른 레이아웃과 메뉴 필요, 단일 레이아웃 +
+                          조건부 렌더링은 복잡함
+                        </li>
+                        <li>
+                          <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                            [해결]
+                          </span>
+                          권한별 레이아웃 분리를 Route Groups + 서버 권한
+                          확인으로 설계하여, 발생하던 hydration 이슈를
+                          구조적으로 제거하고 레이아웃/메뉴 코드의 복잡도를
+                          낮췄습니다
+                        </li>
+                        <li>
+                          <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                            [문제]
+                          </span>
+                          10개 이상 도메인에 대해 일관된 테이블 UI 필요,
+                          페이지네이션/정렬/필터링/행 선택/컬럼 리사이징 등
+                          복잡한 기능 요구, 도메인마다 새로 만들면 중복 코드
+                          과다
+                        </li>
+                        <li>
+                          <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                            [해결]
+                          </span>
+                          TanStack Table v8 Headless UI 선택, 범용 DataTable
+                          컴포넌트 설계, TypeScript 제네릭 활용. 서버사이드
+                          페이지네이션으로 평균 로딩 0.5초 이내, 컴포넌트
+                          재사용률 95%, 개발 속도 3배 향상
+                        </li>
+                      </ul>
+                    </div>
+                    <div>
+                      <div className="text-sm px-2 py-1 text-center italic">
+                        성과
+                      </div>
+                      <ul className="list-disc list-inside space-y-1">
+                        <li>풀 CRUD 기능, Excel 다운로드, 실시간 대시보드</li>
+                        <li>
+                          관리자 작업 효율성 60% 향상 (기존 수동 작업 대비)
+                        </li>
+                      </ul>
+                    </div>
+                    <div>
+                      <div className="flex flex-col gap-5">
+                        <div className="text-sm px-2 py-1 text-center italic">
+                          회고
+                        </div>
+                        <div>
+                          <div className="font-bold mb-4">배운 점</div>
+                          <ul className="list-inside list-disc flex flex-col gap-2">
+                            <li>
+                              <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                                [복잡한 권한 시스템 설계]
+                              </span>
+                              라우트 그룹을 활용한 권한별 레이아웃 분리,
+                              RBAC(Role-Based Access Control) 구현
+                            </li>
+                            <li>
+                              <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                                [대규모 폼 상태관리]
+                              </span>
+                              Zustand를 활용한 복잡한 폼 상태 관리, 원본 데이터
+                              추적을 통한 변경 감지
+                            </li>
+                            <li>
+                              <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                                [고성능 테이블 구현]
+                              </span>
+                              TanStack Table의 유연한 API 활용, 서버사이드
+                              페이지네이션, 가상화
+                            </li>
+                            <li>
+                              <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                                [모듈화 및 재사용성]
+                              </span>
+                              Custom hooks, Container 패턴, 범용 컴포넌트 설계로
+                              개발 속도 향상
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                {/* Surromind UI 컴포넌트 라이브러리 */}
+                <li className="flex gap-8 max-md:flex-col">
+                  <div className="sticky top-[148px] h-[174px] text-2xl font-semibold basis-1/4 max-md:text-center max-md:static">
+                    <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                      UI 컴포넌트 라이브러리
+                    </span>
+                    <p>Surromind Monorepo</p>
+                    <ul className="font-thin text-base break-all">
+                      <li>React, TypeScript, Styled Components, Storybook</li>
+                    </ul>
+                  </div>
+                  <div className="flex flex-col gap-10 basis-3/4">
+                    <div>
+                      <div className="text-sm px-2 py-1 text-center italic">
+                        주요 기능
+                      </div>
+                      <ul className="list-disc list-inside space-y-1">
+                        <li>
+                          재사용 가능한 UI 컴포넌트 라이브러리 구축 (26개
+                          컴포넌트)
+                        </li>
+                        <li>
+                          메뉴, Breadcrumb, AutoComplete, Badge, Modal 등 핵심
+                          컴포넌트 리팩토링
+                        </li>
+                        <li>Jest + React Testing Library 기반 단위 테스트</li>
+                        <li>
+                          Storybook을 활용한 컴포넌트 문서화 및 시각적 테스트
+                        </li>
+                      </ul>
+                    </div>
+                    <div>
+                      <div className="text-sm px-2 py-1 text-center italic">
+                        트러블슈팅
+                      </div>
+                      <ul className="list-disc list-inside space-y-1">
+                        <li>
+                          <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                            [문제]
+                          </span>
+                          메뉴와 Breadcrumb 컴포넌트의 과도한 useEffect 사용으로
+                          불필요한 리렌더링 발생, 디버깅 어려움
+                        </li>
+                        <li>
+                          <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                            [해결]
+                          </span>
+                          메뉴는 useEffect 제거 및 초기 상태 설정 방식으로 변경,
+                          Breadcrumb은 내부 상태 관리를 완전히 제거하고 Props
+                          기반 완전 제어 컴포넌트로 전환. 렌더링 성능 40% 향상,
+                          디버깅 시간 60% 단축
+                        </li>
+                        <li>
+                          <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                            [문제]
+                          </span>
+                          interface와 type import 간 순환 참조로 인한 빌드 에러
+                          발생
+                        </li>
+                        <li>
+                          <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                            [해결]
+                          </span>
+                          공통 interface를 별도 types.ts 파일로 분리, interface
+                          extends 활용하여 타입 재사용, import 구조를 단방향으로
+                          재설계. 빌드 에러 완전 해결, 타입 재사용성 및
+                          유지보수성 향상
+                        </li>
+                      </ul>
+                    </div>
+                    <div>
+                      <div className="text-sm px-2 py-1 text-center italic">
+                        성과
+                      </div>
+                      <ul className="list-disc list-inside space-y-1">
+                        <li>컴포넌트 재사용성 30% 향상</li>
+                        <li>테스트 코드작성으로 안정성 향상</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <div className="flex flex-col gap-5">
+                        <div className="text-sm px-2 py-1 text-center italic">
+                          회고
+                        </div>
+                        <div>
+                          <div className="font-bold mb-4">배운 점</div>
+                          <ul className="list-inside list-disc flex flex-col gap-2">
+                            <li>
+                              <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                                [체계적인 컴포넌트 설계]
+                              </span>
+                              상태 관리를 최소화하여 예측 가능성을 높이고, Props
+                              인터페이스를 직관적으로 설계하며, 컴포넌트 책임을
+                              명확히 분리하는 &quot;좋은 컴포넌트&quot;의 원칙
+                              학습
+                            </li>
+                            <li>
+                              <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                                [테스트 주도 개발의 가치]
+                              </span>
+                              테스트 코드 작성으로 버그 조기 발견, 대규모
+                              리팩토링 시 안전성 확보, 테스트가 컴포넌트 사용
+                              방법을 명확히 문서화하는 효과 체감
+                            </li>
+                            <li>
+                              <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                                [TypeScript 타입 안정성]
+                              </span>
+                              interface extends를 통한 타입 재사용, 순환 참조
+                              문제 해결, 런타임 에러를 컴파일 타임에 잡아
+                              장기적으로 유지보수 비용 절감
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                {/* AIOCR - AI OCR 문서 처리 */}
+                <li className="flex gap-8 max-md:flex-col">
+                  <div className="sticky top-[148px] h-[174px] text-2xl font-semibold basis-1/4 max-md:text-center max-md:static">
+                    <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                      AI OCR 문서 처리
+                    </span>
+                    <p>AIOCR</p>
+                    <ul className="font-thin text-base break-all">
+                      <li>Next.js 14, Zustand, Alova, Ant Design</li>
+                    </ul>
+                  </div>
+                  <div className="flex flex-col gap-10 basis-3/4">
+                    <div>
+                      <div className="text-sm px-2 py-1 text-center italic">
+                        주요 기능
+                      </div>
+                      <ul className="list-disc list-inside space-y-1">
+                        <li>
+                          문서 업로드 및 OCR 처리 관리 (다중 파일, 실시간 진행률
+                          표시)
+                        </li>
+                        <li>
+                          한글 검색 정규화(NFD 방식), 다중 조건 필터, 디바운스
+                          검색(300ms)
+                        </li>
+                        <li>
+                          계정 및 권한 관리 (USER ↔ MANAGER 역할 변경,
+                          활성/비활성 관리)
+                        </li>
+                        <li>
+                          AI 키워드 관리 시스템 (동의어 그룹, 드래그앤드롭
+                          우선순위 조정)
+                        </li>
+                        <li>
+                          목록 상태 유지 기능 (URL 쿼리, sessionStorage 스크롤
+                          복원)
+                        </li>
+                      </ul>
+                    </div>
+                    <div>
+                      <div className="text-sm px-2 py-1 text-center italic">
+                        트러블슈팅
+                      </div>
+                      <ul className="list-disc list-inside space-y-1">
+                        <li>
+                          <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                            [문제]
+                          </span>
+                          목록에서 상세 페이지를 거쳐 돌아올 때 처음으로 초기화
+                          (페이지, 필터, 스크롤 위치 모두 리셋)
+                        </li>
+                        <li>
+                          <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                            [해결]
+                          </span>
+                          useQueryString 커스텀 훅으로 URL 기반 페이지 상태
+                          관리, useScrollMemory 훅으로 sessionStorage에 스크롤
+                          위치 저장/복원. 상세에서 돌아올 때 이전 상태 정확히
+                          복원, Work 목록과 계정관리 목록 모두 적용
+                        </li>
+                        <li>
+                          <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                            [문제]
+                          </span>
+                          한글 검색 시 자모 분리 문제로 특정 조합에서 검색 실패
+                        </li>
+                        <li>
+                          <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                            [해결]
+                          </span>
+                          검색어 전송 전 NFD(Compatibility Decomposition) 정규화
+                          적용. 모든 한글 검색이 일관되게 작동, 자모 분리 문자도
+                          정확히 검색
+                        </li>
+                      </ul>
+                    </div>
+                    <div>
+                      <div className="text-sm px-2 py-1 text-center italic">
+                        성과
+                      </div>
+                      <ul className="list-disc list-inside space-y-1">
+                        <li>
+                          5개의 독립적인 Zustand 스토어로 관심사 분리, 확장
+                          가능한 아키텍처 구축
+                        </li>
+                        <li>
+                          사용자 경험 중심 개발, 보일러플레이트 90% 감소, 타입
+                          안정성 확보
+                        </li>
+                      </ul>
+                    </div>
+                    <div>
+                      <div className="flex flex-col gap-5">
+                        <div className="text-sm px-2 py-1 text-center italic">
+                          회고
+                        </div>
+                        <div>
+                          <div className="font-bold mb-4">배운 점</div>
+                          <ul className="list-inside list-disc flex flex-col gap-2">
+                            <li>
+                              <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                                [사용자 경험 중심 개발]
+                              </span>
+                              단순히 기능을 구현하는 것을 넘어 실제 사용자의
+                              불편함을 발견하고 해결. URL 쿼리와
+                              sessionStorage를 조합하여 SPA에서도 브라우저
+                              네이티브 동작처럼 자연스러운 UX 제공
+                            </li>
+                            <li>
+                              <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                                [현대적인 기술 스택 활용]
+                              </span>
+                              Zustand의 간결한 API로 Redux 대비 보일러플레이트
+                              90% 감소, Alova의 선언적 API로 직관적인 데이터
+                              페칭 구현
+                            </li>
+                            <li>
+                              <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                                [한글 처리의 특수성]
+                              </span>
+                              한글 유니코드 정규화 방식(NFC vs NFD)의 차이를
+                              이해하고, 서버-클라이언트 간 인코딩 일관성 확보의
+                              중요성 학습
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                {/* Seul Gallery */}
+                {/* <li className="flex gap-8 max-md:flex-col">
                   <div className="sticky top-[148px] h-[174px] text-2xl font-semibold  basis-1/4 max-md:text-center max-md:static">
                     <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
                       Pixabay API를 활용한 갤러리
@@ -591,7 +1311,7 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
-                </li>
+                </li> */}
               </ul>
             </div>
           </section>
@@ -602,6 +1322,212 @@ export default function Home() {
             </div>
             <div className="py-10">
               <div className="flex flex-col gap-10">
+                <div className="flex gap-8 max-md:flex-col">
+                  <div className="sticky top-[148px] h-[174px] text-2xl font-semibold  basis-1/4 max-md:text-center max-md:static">
+                    <p>(주)리턴플러스</p>
+                    <ul className="font-thin text-base">
+                      <li>2025.05 - 현재</li>
+                      <li>개발팀 - 전임(프론트엔드 리드)</li>
+                    </ul>
+                  </div>
+
+                  <div className="flex flex-col gap-10  basis-3/4">
+                    <div>
+                      <p className="pb-4 leading-relaxed">
+                        Next.js 15 기반의 홈페이지·WebView 앱·관리자 대시보드
+                        3개 프론트엔드를 리드하며, 인증/권한/테이블/브릿지 같은
+                        핵심 공통 영역을 모듈화해 제품 간 재사용 구조를
+                        만들었습니다. 이미지·폰트 최적화로 초기 로딩 체감 성능을
+                        개선했고, 메타데이터·구조화 데이터·사이트맵 자동화로
+                        검색 노출 기반을 구축했습니다. 또한 SSR/CSR 환경 분리를
+                        통한 API 통신 안정성 확보, middleware 기반 다단계 인증
+                        플로우 구현, visualViewport API를 활용한 모바일 키보드
+                        대응, TypeScript 조건부 타입 기반 타입 안전한 브릿지
+                        통신 등 WebView 앱 특성에 맞는 아키텍처를 설계해
+                        안정성과 UX를 확보했습니다.
+                      </p>
+                    </div>
+                    <div className="text-sm px-2 py-1 text-center italic">
+                      주 업무내용
+                    </div>
+                    <div className="flex flex-col gap-2">
+                      <div className="flex flex-col">
+                        <strong>의료기기 투자 플랫폼 한조각</strong>
+                      </div>
+                      <div>
+                        <strong>역할</strong>
+                        <p className="mt-2 mb-4">
+                          프론트엔드 리드로서 기술 스택 선정, 공통
+                          아키텍처/컨벤션 수립, 핵심 공통
+                          모듈(인증·권한·테이블·브릿지) 설계, 코드 리뷰 기준
+                          정립을 담당했습니다. 또한 3개 제품(홈·앱·어드민)의
+                          개발 우선순위를 조율하고, 운영/런칭을 위한
+                          성능·SEO·안정성 요구사항을 정리해 팀과 합의된 기준으로
+                          구현했습니다.
+                        </p>
+                      </div>
+                      <div>
+                        <strong>주 업무내용</strong>
+                        <ul className="list-disc list-inside space-y-1">
+                          <li>
+                            프론트엔드 아키텍처 설계 및 기술 스택 선정 (Next.js
+                            15, React 19, TypeScript, Tailwind CSS 4)
+                          </li>
+                          <li>
+                            홈페이지, WebView 앱, 관리자 대시보드 3개 프로젝트
+                            전담 개발
+                          </li>
+                          <li>
+                            GSAP ScrollTrigger 활용 시네마틱 스크롤 애니메이션
+                            구현 (홈페이지)
+                          </li>
+                          <li>
+                            Flutter WebView Bridge 통신 구조 설계 및 구현 (앱)
+                          </li>
+                          <li>
+                            권한 기반 멀티 대시보드 설계 및 TanStack Table 기반
+                            데이터 테이블 구현 (관리자)
+                          </li>
+                          <li>
+                            Sharp/AVIF 이미지 최적화, 폰트 서브셋 자동화로 초기
+                            로딩 시간 70% 개선
+                          </li>
+                          <li>
+                            Next.js Metadata API, JSON-LD, Sitemap.xml 활용 SEO
+                            최적화
+                          </li>
+                        </ul>
+                      </div>
+                      <div>
+                        <strong>성과</strong>
+                        <ul className="list-disc list-inside space-y-1">
+                          <li>
+                            홈페이지 Lighthouse 성능 점수 72 → 95점, SEO 95/100
+                            달성
+                          </li>
+                          <li>
+                            구글 &quot;한조각&quot; 브랜드명 검색 시 상위 노출
+                            (Search Console 기준, 2025년 10월)
+                          </li>
+                          <li>
+                            관리자 대시보드 31개 모듈화된 API Hooks, 10개 이상
+                            도메인 관리
+                          </li>
+
+                          <li>런칭 준비 완료 (투자 유치 진행 중)</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex gap-8 max-md:flex-col">
+                  <div className="sticky top-[148px] h-[174px] text-2xl font-semibold basis-1/4 max-md:text-center max-md:static">
+                    <p>(주)서로마인드</p>
+                    <ul className="font-thin text-base">
+                      <li>2025.01 - 2025.05</li>
+                      <li>DX팀 - 연구원</li>
+                    </ul>
+                  </div>
+
+                  <div className="flex flex-col gap-10 basis-3/4">
+                    <div className="text-sm px-2 py-1 text-center italic">
+                      주 업무내용
+                    </div>
+                    <div className="flex flex-col gap-2">
+                      <div className="flex flex-col">
+                        <strong>Surromind Monorepo</strong>
+                        <strong>UI 컴포넌트 라이브러리 개발</strong>
+                        <span className="font-thin text-base">
+                          (2025.01.08 ~ 2025.04.03)
+                        </span>
+                      </div>
+                      <div>
+                        <strong>주 업무내용</strong>
+                        <ul className="list-disc list-inside space-y-1">
+                          <li>
+                            재사용 가능한 UI 컴포넌트 라이브러리 구축 및
+                            유지보수 (26개 컴포넌트)
+                          </li>
+                          <li>
+                            메뉴, Breadcrumb, AutoComplete, Badge, Modal 등 핵심
+                            컴포넌트 리팩토링 및 개선
+                          </li>
+                          <li>상태 관리 최적화, 디버깅 시간 단축</li>
+                          <li>
+                            TypeScript interface 순환 참조 문제 해결 및 타입
+                            안정성 강화
+                          </li>
+                          <li>
+                            Jest + React Testing Library 기반 단위 테스트 작성
+                          </li>
+                          <li>
+                            Storybook을 활용한 컴포넌트 문서화 및 시각적 테스트
+                          </li>
+                        </ul>
+                      </div>
+                      <div>
+                        <strong>성과</strong>
+                        <ul className="list-disc list-inside space-y-1">
+                          <li>총 119개 커밋, 7개 주요 이슈 해결</li>
+                          <li>컴포넌트 재사용성 향상, 개발 생산성 증가</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div className="flex flex-col gap-2">
+                      <div className="flex flex-col">
+                        <strong>AIOCR</strong>
+                        <strong>AI 기반 문서 OCR 처리 시스템 프론트엔드</strong>
+                        <span className="font-thin text-base">
+                          (프로젝트 참여 기간)
+                        </span>
+                      </div>
+                      <div>
+                        <strong>주 업무내용</strong>
+                        <ul className="list-disc list-inside space-y-1">
+                          <li>
+                            Next.js 14 App Router 기반 문서 OCR 처리 시스템
+                            프론트엔드 개발
+                          </li>
+                          <li>
+                            Zustand 상태 관리 및 Alova HTTP 클라이언트로 API
+                            통신 구조 설계
+                          </li>
+                          <li>
+                            문서 업로드, OCR 처리 관리, 계정 및 권한 관리, AI
+                            키워드 관리 기능 구현
+                          </li>
+                          <li>
+                            한글 검색 정규화(NFD 방식), 디바운스 검색, 다중 조건
+                            필터링 구현
+                          </li>
+                          <li>
+                            목록 상태 유지 기능 구현 (URL 쿼리 기반 페이지 관리
+                            + sessionStorage 스크롤 복원)
+                          </li>
+                          <li>
+                            @dnd-kit을 활용한 드래그앤드롭 우선순위 관리
+                            인터페이스 구현
+                          </li>
+                        </ul>
+                      </div>
+                      <div>
+                        <strong>성과</strong>
+                        <ul className="list-disc list-inside space-y-1">
+                          <li>
+                            5개의 독립적인 Zustand 스토어로 관심사 분리 및 확장
+                            가능한 아키텍처 구축
+                          </li>
+                          <li>
+                            커스텀 훅(useQueryString, useScrollMemory)을 통한
+                            비즈니스 로직 재사용성 향상
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
                 <div className="flex gap-8 max-md:flex-col">
                   <div className="sticky top-[148px] h-[174px] text-2xl font-semibold  basis-1/4 max-md:text-center max-md:static">
                     <p>(주)하이브랩</p>
@@ -729,7 +1655,7 @@ export default function Home() {
                           올리브영 PC, 모바일 이벤트 마크업 페이지 제작
                         </strong>
                         <span className="font-thin text-base">
-                          (2023.07.01 ~ 2024.11.30)
+                          (2023.07.01 ~ 2023.11.30)
                         </span>
                       </div>
                       <div>
