@@ -1,6 +1,7 @@
 import Link from "next/link";
 import TopButton from "./components/top-button";
 import { FaLink } from "react-icons/fa";
+import { FaSquareGithub } from "react-icons/fa6";
 
 export default function Home() {
   return (
@@ -109,6 +110,215 @@ export default function Home() {
             </div>
             <div className="py-10">
               <ul className="flex flex-col gap-20">
+                {/* Document Chat - AI RAG 챗봇 */}
+                <li className="flex gap-8 max-md:flex-col">
+                  <div className="sticky top-[148px] h-[174px] text-2xl font-semibold basis-1/4 max-md:text-center max-md:static">
+                    <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                      AI RAG 챗봇
+                    </span>
+                    <p>Document Chat</p>
+                    <ul className="font-thin text-base break-all">
+                      <li>
+                        Next.js 15, React 19, LangChain, Supabase, Zustand
+                      </li>
+                      <li className="flex max-md:justify-center items-center gap-4 py-4">
+                        <Link
+                          href={"https://chatbot-zeta-five-34.vercel.app/"}
+                          target="_blank"
+                        >
+                          <FaLink size={30}></FaLink>
+                        </Link>
+                        <Link
+                          href={"https://github.com/sungjaechoi/chatbot"}
+                          target="_blank"
+                        >
+                          <FaSquareGithub size={38}></FaSquareGithub>
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="flex flex-col gap-10 basis-3/4">
+                    <div>
+                      <p className="py-2 leading-relaxed">
+                        PDF를 업로드하면 문서 기반 대화가 가능한 RAG 챗봇.
+                        Vercel 배포 제약(4.5MB)을 Storage 직접 업로드로
+                        우회하고, HNSW 인덱스 기반 벡터 검색과 RLS 데이터 격리로
+                        멀티유저 환경의 문서 QA 서비스를 구현
+                      </p>
+                    </div>
+                    <div>
+                      <div className="text-sm px-2 py-1 text-center italic">
+                        주요 기능
+                      </div>
+                      <ul className="list-disc list-inside space-y-1">
+                        <li>
+                          문서 업로드 및 인덱싱 — PDF 페이지별 텍스트 추출 후
+                          text-embedding-3-large(3072차원) 벡터 임베딩 생성,
+                          업로드/임베딩 단계별 로딩 상태 표시
+                        </li>
+                        <li>
+                          문서 기반 채팅 — HNSW 인덱스 + 코사인 유사도 Top-10
+                          검색으로 관련 컨텍스트 추출, Vercel AI SDK + Gemini
+                          2.5 Flash로 답변 생성, 출처 페이지 번호 제공
+                        </li>
+                        <li>
+                          세션 관리 — 1개 PDF에서 주제별 대화 세션
+                          생성·전환·삭제, 세션별 최근 10건 대화 히스토리를
+                          프롬프트에 결합하여 맥락 유지
+                        </li>
+                        <li>
+                          인증 및 보안 — Google OAuth + Supabase Auth 연동,
+                          Next.js 미들웨어 라우트 보호, 6개 테이블에 RLS 정책
+                          적용으로 사용자별 데이터 완전 격리
+                        </li>
+                        <li>
+                          크레딧 시스템 — Vercel AI Gateway의 호출 전/후
+                          total_used 차이로 토큰 비용 산출, fire-and-forget
+                          비동기 로깅으로 응답 지연 없이 사용량 추적
+                        </li>
+                      </ul>
+                    </div>
+                    <div>
+                      <div className="text-sm px-2 py-1 text-center italic">
+                        트러블슈팅
+                      </div>
+                      <ul className="list-disc list-inside space-y-1">
+                        <li>
+                          <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                            [문제]
+                          </span>
+                          Vercel API 라우트 body 크기 제한(4.5MB)으로 대용량 PDF
+                          업로드 실패, 서버리스 환경에서 3072차원 임베딩
+                          생성까지 대기 시간 발생
+                        </li>
+                        <li>
+                          <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                            [해결]
+                          </span>
+                          클라이언트 → Supabase Storage 직접 업로드(10MB)로 body
+                          limit 우회 후 API에 메타데이터만 전송. 임베딩 생성은
+                          서버에서 처리하며, 업로드 중/임베딩 중/완료 3단계
+                          상태를 Zustand로 관리하여 사용자에게 현재 처리 단계
+                          표시
+                        </li>
+                        <li>
+                          <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                            [문제]
+                          </span>
+                          페이지 단위 청킹에서 관련 없는 컨텍스트가 Top-K에
+                          포함되어 답변 품질 저하
+                        </li>
+                        <li>
+                          <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                            [해결]
+                          </span>
+                          HNSW 인덱스(vector_cosine_ops) 적용으로 검색 성능
+                          확보, Top-10 유사도 결과와 최근 대화 히스토리 10건을
+                          결합한 프롬프트 구성으로 정확도 향상. 출처 페이지
+                          번호를 함께 제공하여 답변 신뢰성 강화
+                        </li>
+                        <li>
+                          <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                            [문제]
+                          </span>
+                          크레딧 사용량 로깅이 API 응답을 블로킹하여 채팅 응답
+                          지연 발생
+                        </li>
+                        <li>
+                          <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                            [해결]
+                          </span>
+                          fire-and-forget IIFE 패턴으로 크레딧 로깅을 비블로킹
+                          처리, 응답 반환 후 비동기로 Vercel AI Gateway 비용
+                          산출 및 DB 기록. 실패 시 catch 로깅만 수행하여 사용자
+                          경험에 영향 없도록 설계
+                        </li>
+                      </ul>
+                    </div>
+                    <div>
+                      <div className="text-sm px-2 py-1 text-center italic">
+                        성과
+                      </div>
+                      <ul className="list-disc list-inside space-y-1">
+                        <li>
+                          PDF 추출 → 임베딩(3072차원) → HNSW 벡터 검색 → LLM
+                          답변 생성까지 end-to-end RAG 파이프라인 설계 및 Vercel
+                          서버리스 환경에 안정적 배포
+                        </li>
+                        <li>
+                          Container/View 패턴으로 UI/로직 분리, 5개 독립 Zustand
+                          스토어로 관심사별 상태 관리 아키텍처 구축
+                        </li>
+                        <li>
+                          Supabase의 PostgreSQL + pgvector + Storage + Auth를
+                          단일 플랫폼에서 통합 운영, 6개 테이블 RLS 정책으로
+                          멀티테넌트 데이터 격리 구현
+                        </li>
+                      </ul>
+                    </div>
+                    <div>
+                      <div className="flex flex-col gap-5">
+                        <div className="text-sm px-2 py-1 text-center italic">
+                          회고
+                        </div>
+                        <div>
+                          <div className="font-bold mb-4">배운 점</div>
+                          <ul className="list-inside list-disc flex flex-col gap-2">
+                            <li>
+                              <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                                [RAG 파이프라인 설계와 트레이드오프]
+                              </span>
+                              페이지 단위 청킹의 구현 단순성과 문맥 끊김
+                              리스크를 비교 검토하고, HNSW 인덱스 선택(검색 속도
+                              vs 인덱스 빌드 비용), Top-K 값 튜닝,
+                              temperature(0.3) 설정 등 각 단계의 의사결정 근거를
+                              체득. 향후 MMR/Rerank 적용과 chunk overlap
+                              도입으로 검색 품질 개선 계획
+                            </li>
+                            <li>
+                              <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                                [서버리스 환경에서의 비동기 처리 설계]
+                              </span>
+                              Vercel 서버리스에서는 background job이
+                              불가능하므로, fire-and-forget IIFE 패턴으로
+                              비블로킹 로깅을 구현하고 응답 후 비동기 처리하는
+                              구조를 설계. 서버리스의 제약 안에서 사용자 경험을
+                              우선한 아키텍처 판단 경험
+                            </li>
+                            <li>
+                              <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                                [Supabase RLS 기반 보안 설계]
+                              </span>
+                              auth.uid() 기반 행 수준 보안 정책을 6개
+                              테이블(profiles, chat_sessions, chat_messages,
+                              pdf_documents, storage.objects,
+                              credit_usage_logs)에 적용하며, 정책 누락 시 데이터
+                              노출 리스크와 과도한 정책의 성능 영향을 균형 있게
+                              설계하는 경험 습득
+                            </li>
+                          </ul>
+                        </div>
+                        <div>
+                          <div className="font-bold mb-4">개발 방식</div>
+                          <ul className="list-inside list-disc flex flex-col gap-2">
+                            <li>
+                              <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
+                                [Claude Code 에이전트 파이프라인]
+                              </span>
+                              5개 전문 에이전트(Orchestrator,
+                              Schema/Backend/Frontend Developer, Reviewer)를
+                              역할별로 구성하고, 요구사항 분석 → 스키마 설계 →
+                              구현 → 자동 리뷰(PASS/FAIL) → 실패 시 재작업(최대
+                              2회) 루프를 포함한 파이프라인으로 개발 프로세스
+                              자동화
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
                 {/* 한조각 홈페이지 */}
                 <li className="flex gap-8 max-md:flex-col">
                   <div className="sticky top-[148px] h-[174px] text-2xl font-semibold basis-1/4 max-md:text-center max-md:static">
