@@ -387,16 +387,17 @@ export default function Home() {
                           <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
                             [문제]
                           </span>
-                          KCP PASS 본인인증 iframe 통신 시 인증 완료 후 부모
-                          창으로 결과 전달 안 됨, 회원가입 중단
+                          KCP PASS 본인인증 완료 후 부모 창으로 결과 전달 안 됨,
+                          iOS/Android WebView에서 회원가입 중단
                         </li>
                         <li>
                           <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
                             [해결]
                           </span>
-                          postMessage 이벤트 리스너 등록, Origin 검증 로직 추가,
-                          클린업 함수로 메모리 누수 방지. iOS/Android
-                          WebView에서 인증 결과 전달 정상화
+                          팝업 윈도우(window.open) + URL 폴링 방식으로 전환.
+                          인증 완료 시 콜백 URL 파라미터로 결과를 전달받아
+                          setInterval로 팝업 URL 변화를 감지하는 구조로 변경.
+                          iOS/Android WebView 환경에서도 인증 결과 전달 정상화
                         </li>
                         <li>
                           <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
@@ -549,11 +550,10 @@ export default function Home() {
                           <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
                             [해결]
                           </span>
-                          visualViewport API를 활용한 실시간 키보드 높이 감지
-                          커스텀 훅(useKeyboardHeight) 구현. window.innerHeight
-                          - visualViewport.height로 키보드 높이 계산,
-                          FixedBottomContainer 컴포넌트에서 bottom 스타일 동적
-                          조정. Safe Area와 키보드 높이를 max() 함수로 병합 처리
+                          모바일에서 키보드가 올라오면 하단 버튼이 가려지는 문제
+                          해결. visualViewport API로 키보드 높이를 실시간
+                          감지하고, 하단 고정 버튼을 키보드 위로 자동 이동.
+                          iPhone 홈바(Safe Area)도 함께 대응
                         </li>
                         <li>
                           <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
@@ -835,8 +835,7 @@ export default function Home() {
                           </span>
                           메뉴는 useEffect 제거 및 초기 상태 설정 방식으로 변경,
                           Breadcrumb은 내부 상태 관리를 완전히 제거하고 Props
-                          기반 완전 제어 컴포넌트로 전환. 렌더링 성능 40% 향상,
-                          디버깅 시간 60% 단축
+                          기반 완전 제어 컴포넌트로 전환.
                         </li>
                         <li>
                           <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
@@ -861,8 +860,11 @@ export default function Home() {
                         성과
                       </div>
                       <ul className="list-disc list-inside space-y-1">
-                        <li>컴포넌트 재사용성 30% 향상</li>
-                        <li>테스트 코드작성으로 안정성 향상</li>
+                        <li>
+                          useEffect 제거 및 Props 기반 제어 컴포넌트 전환으로
+                          불필요한 리렌더링 제거
+                        </li>
+                        <li>순환 참조 해결로 빌드 안정성 확보</li>
                       </ul>
                     </div>
                     <div>
