@@ -1,70 +1,85 @@
-# Frontend Developer 최성재
+# Frontend Engineer 최성재
 
-안녕하세요! 프론트엔드 개발자 최성재입니다.  
-2년간의 퍼블리셔 경험과 React, Next.js를 활용한 웹 애플리케이션 개발 능력을 기반으로 UI/UX 개선과 효율적인 웹 구현에 기여할 수 있습니다.
+Next.js 15 / React 19 / TypeScript 기반의 프론트엔드 엔지니어입니다.
+2년간의 퍼블리셔 경험을 바탕으로 현재 3개 프론트엔드 프로젝트를 리드하며, 아키텍처 설계부터 성능 최적화, SEO까지 전반적인 프론트엔드 개발을 수행하고 있습니다.
 
-## 💻 Skills & Expertise
+## Tech Stack
 
-### 퍼블리셔 경험
+**Core** — React, Next.js (App Router), TypeScript, Tailwind CSS, Zustand
 
-- **2년 이상 경력**: 안정적인 마크업과 스타일링, 크로스 브라우징, 반응형 웹 구현 가능
-- **HTML/CSS/JavaScript**: 퍼블리싱의 기본부터 고급 기술까지 익힘
+**Production** — TanStack Table, Framer Motion, GSAP, React Hook Form, Axios, Storybook, Jest / React Testing Library
 
-### 프론트엔드 개발
+**Familiar** — Redux, SCSS, Styled Components, Supabase, Prisma, Docker
 
-- **React & Next.js**: TypeScript 기반의 웹 앱 구현 가능
-- **React Query**: 캐싱 레이어 이해, 낙관적 업데이트 등 전반적인 기능 활용
-- **상태관리**: Context API 및 Redux 설계, 커스텀 훅 설계 가능
-- **Routing**: CSR, SSR, SSG의 개념과 Next.js의 동작 방식에 대한 이해
-
-### 협업 및 버전 관리
-
-- **Git 활용**: 협업에서 원활한 Git 사용 가능
-- **웹 통신 지식**: REST API, HTTP 메서드, Payload, Query String 이해 및 활용 가능
-- **Supabase 경험**: 로그인, 회원가입, Transaction 구현 경험
+**LLM Workflow** — Claude Code, OpenAI API, Prompt Engineering
 
 ---
 
-## 📖 학습 및 노력
+## Career
 
-2023년 11월 23일부터 매일 **6시간 이상** 학습하며, 프론트엔드 개발자로 성장하기 위해 꾸준히 노력했습니다.  
-다음은 그동안 해온 노력과 경험입니다:
+### ReturnPlus (2025.05 ~ 현재) — 프론트엔드 리드
 
-1. **멘토링**
+- 한조각 홈페이지, WebView 앱, 관리자 대시보드 3개 프로젝트 리드
+- 공통 모듈 설계 (인증, 권한, 테이블, WebView Bridge)
+- 이미지/폰트 70% 이상 경량화, Lighthouse 95점 달성
+- SEO 구현 (Dynamic Metadata, JSON-LD, Sitemap)
 
-   - 주 2회 팀장급 프론트엔드 개발자에게 1년 이상 멘토링을 받았습니다.
+### Surromind (2025.01 ~ 2025.05) — DX팀 연구원
 
-2. **기본기 학습**
+- React/TypeScript 기반 UI 컴포넌트 라이브러리 개발 (26개 컴포넌트)
+- Storybook 문서화 및 Jest/RTL 단위 테스트 작성
+- AIOCR 시스템 프론트엔드 개발
 
-   - **JavaScript**: "모던 JavaScript 딥다이브"를 통해 깊이 있는 이해를 목표로 공부
-   - **React**: "리액트를 다루는 기술"로 React의 기본기부터 심화 내용까지 학습
-   - **Next.js**: 인프런 강의를 통해 Next.js의 기본기를 다짐
+### Hivelab (2021.09 ~ 2023.11) — UX/UI 인터랙티브팀
 
-3. **Supabase 및 Prisma ORM 경험**
-
-   - Supabase를 활용한 로그인, 회원가입 프로세스 구현
-   - Prisma ORM을 사용하여 효율적인 데이터베이스 모델링 및 쿼리 작성
-   - Supabase 및 Next.js를 사용하여 Controller와 Service 로직 구현
-   - Transaction 사용 및 데이터 처리 로직 구현
-
-4. **AWS EC2 및 Docker를 활용한 배포**
-
-   - Docker 컨테이너를 활용하여 애플리케이션 환경을 효율적으로 관리
-   - AWS EC2 인스턴스를 사용한 애플리케이션 배포환경을 이해하고 배포가능
-
-5. **클린 코드 실천**
-   - 클라이언트와 백엔드 요청 로직을 서비스 로직으로 분리하여 관리
-   - 레이어 구조 설계로 코드 가독성과 유지보수성 향상
+- NHN PayCo 이벤트 프로모션 운영 (월 70~100건 이상)
+- NAVER Yorkie 실시간 협업 프레임워크 참여
+- Olive Young 이벤트 페이지 마크업
+- 2년 이상의 HTML/CSS/JavaScript 퍼블리싱 경력
 
 ---
 
-## 🎯 비전 및 가치
+## Projects
 
-- **협업 중심**: 다양한 의견을 경청하고 문제 해결을 위해 협력하는 것을 좋아합니다.
-- **헌신적인 자세**: 팀의 목표에 헌신하며, 철저한 원칙과 가이드 준수를 중시합니다.
-- **배우고 성장**: 배우는 자세로 팀의 목표 달성에 기여하고, 지속적으로 성장하고자 합니다.
+### Document Chat — AI RAG 챗봇
+
+Next.js 15 · React 19 · LangChain · Supabase · Zustand
+
+PDF 업로드 → 벡터 임베딩(3072차원) → HNSW 검색 → LLM 응답 파이프라인 구현.
+멀티 유저 격리(RLS), 세션 관리, 크레딧 시스템 포함.
+
+### 한조각 Homepage — 의료기기 투자 플랫폼
+
+Next.js 15 · React 19 · TypeScript · Tailwind CSS 4 · GSAP
+
+GSAP ScrollTrigger 기반 시네마틱 애니메이션 9개 섹션 구현.
+Zustand 다단계 본인인증(KCP PASS), SEO 최적화(Lighthouse 95점).
+
+### 한조각 App — WebView 모바일 앱
+
+Next.js 15 · Zustand · Framer Motion · Recharts
+
+KCP PASS 인증, PIN/생체 로그인, 투자 상품 관리, 배당 내역 조회.
+Flutter WebView Bridge 타입 안전 통신 구현.
+
+### 관리자 대시보드
+
+Next.js 15 · TanStack Table v8 · Lexical · Recharts
+
+역할 기반 멀티 대시보드(본사/병원/장비 관리자).
+서버 사이드 페이지네이션, 31개 이상 모듈화된 API 훅, 10개 이상 도메인 관리.
+
+### Surromind Monorepo — UI 컴포넌트 라이브러리
+
+React · TypeScript · Styled Components · Storybook
+
+26개 재사용 컴포넌트 개발, Jest + RTL 단위 테스트, Storybook 문서화.
+
+### AIOCR — AI OCR 문서 처리 시스템
+
+Next.js 14 · Zustand · Alova · Ant Design
+
+문서 업로드 및 OCR 처리, 한글 검색 정규화(NFD), 역할 관리, 드래그 앤 드롭 우선순위 관리.
 
 ---
 
-함께 일하며 더 나은 결과물을 만들어 가고 싶습니다.  
-감사합니다.
