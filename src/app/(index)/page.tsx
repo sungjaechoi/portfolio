@@ -49,8 +49,8 @@ export default function Home() {
                 </p>
                 <p className="pb-2">
                   Claude Code를 활용해 LLM 기반 개발 워크플로우를 설계·운영하며,
-                  요구사항을 구조화해 작업 단계를 분해하고(분석→설계→구현→검증),
-                  역할이 다른 에이전트들을 조율해 일관된 산출물이 나오도록
+                  요구사항을 분석·설계·구현·검증 단계로 구조화하고 Subagents와
+                  Agent Teams를 활용해 작업 분배와 협업 프로세스를 체계적으로
                   관리합니다.
                   <br />
                   특히 자동 검증과 피드백 루프를 통해 품질 기준을 반복적으로
@@ -1353,16 +1353,16 @@ export default function Home() {
                     <div>
                       <p className="pb-4 leading-relaxed">
                         Next.js 15 기반의 한조각 홈페이지·WebView 앱·관리자
-                        대시보드 3개 프론트엔드를 리드하며, 인증/권한/테이블/브릿지 같은
-                        핵심 공통 영역을 모듈화해 제품 간 재사용 구조를
-                        만들었습니다. 이미지·폰트 최적화로 초기 로딩 체감 성능을
-                        개선했고, 메타데이터·구조화 데이터·사이트맵 자동화로
-                        검색 노출 기반을 구축했습니다. 또한 SSR/CSR 환경 분리를
-                        통한 API 통신 안정성 확보, middleware 기반 다단계 인증
-                        플로우 구현, visualViewport API를 활용한 모바일 키보드
-                        대응, TypeScript 조건부 타입 기반 타입 안전한 브릿지
-                        통신 등 WebView 앱 특성에 맞는 아키텍처를 설계해
-                        안정성과 UX를 확보했습니다.
+                        대시보드 3개 프론트엔드를 리드하며,
+                        인증/권한/테이블/브릿지 같은 핵심 공통 영역을 모듈화해
+                        제품 간 재사용 구조를 만들었습니다. 이미지·폰트 최적화로
+                        초기 로딩 체감 성능을 개선했고, 메타데이터·구조화
+                        데이터·사이트맵 자동화로 검색 노출 기반을 구축했습니다.
+                        또한 SSR/CSR 환경 분리를 통한 API 통신 안정성 확보,
+                        middleware 기반 다단계 인증 플로우 구현, visualViewport
+                        API를 활용한 모바일 키보드 대응, TypeScript 조건부 타입
+                        기반 타입 안전한 브릿지 통신 등 WebView 앱 특성에 맞는
+                        아키텍처를 설계해 안정성과 UX를 확보했습니다.
                       </p>
                       <p className="pb-4 leading-relaxed">
                         기존 담당자가 개발한 지도 기반 부동산 플랫폼 Prime을
@@ -1443,7 +1443,10 @@ export default function Home() {
                         </ul>
                       </div>
                     </div>
-                    <div id="career-prime" className="flex scroll-mt-60 flex-col gap-2 md:scroll-mt-40">
+                    <div
+                      id="career-prime"
+                      className="flex scroll-mt-60 flex-col gap-2 md:scroll-mt-40"
+                    >
                       <div className="flex flex-col">
                         <strong>지도 기반 부동산·개발사업 플랫폼 Prime</strong>
                       </div>
@@ -1462,12 +1465,12 @@ export default function Home() {
                         <ul className="list-disc list-inside space-y-1">
                           <li>
                             컴포넌트·유틸리티·전역 상태 중심의 기존 구조를 FSD
-                            6개 계층으로 재구성하고, 도메인 모델·API·데이터 파싱과
-                            화면 조합의 책임 분리
+                            6개 계층으로 재구성하고, 도메인 모델·API·데이터
+                            파싱과 화면 조합의 책임 분리
                           </li>
                           <li>
-                            Naver Maps 기반 지도에서 줌 단계별 데이터 조회,
-                            최신 요청 반영, 마커 재사용과 수정 정보 동기화 개선
+                            Naver Maps 기반 지도에서 줌 단계별 데이터 조회, 최신
+                            요청 반영, 마커 재사용과 수정 정보 동기화 개선
                           </li>
                           <li>
                             개발구역 등록·수정·삭제, Polygon·MultiPolygon 표시,
@@ -1479,7 +1482,8 @@ export default function Home() {
                           </li>
                           <li>
                             FSD 의존성·포맷·린트·타입 검사를 로컬 푸시 전 검증에
-                            연결하고, 주요 API 파서와 업무 규칙의 회귀 테스트 구성
+                            연결하고, 주요 API 파서와 업무 규칙의 회귀 테스트
+                            구성
                           </li>
                         </ul>
                       </div>
@@ -1497,9 +1501,9 @@ export default function Home() {
                             축소
                           </li>
                           <li>
-                            매물 수정 후 마커에 이전 정보가 남는 문제를 해결하고,
-                            사용자 응답·API 설정·개발구역 규칙 등 22개 회귀
-                            테스트 케이스 구성
+                            매물 수정 후 마커에 이전 정보가 남는 문제를
+                            해결하고, 사용자 응답·API 설정·개발구역 규칙 등 22개
+                            회귀 테스트 케이스 구성
                           </li>
                         </ul>
                       </div>
