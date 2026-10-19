@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { FaLink } from "react-icons/fa";
-import { FaSquareGithub } from "react-icons/fa6";
 
 const features = [
   {
