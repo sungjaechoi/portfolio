@@ -1,7 +1,8 @@
 # Frontend Engineer 최성재
 
 Next.js 15 / React 19 / TypeScript 기반의 프론트엔드 엔지니어입니다.
-2년간의 퍼블리셔 경험을 바탕으로 현재 3개 프론트엔드 프로젝트를 리드하며, 아키텍처 설계부터 성능 최적화, SEO까지 전반적인 프론트엔드 개발을 수행하고 있습니다.
+2년간의 퍼블리셔 경험을 바탕으로 한조각 홈페이지·WebView 앱·관리자 대시보드 3개 프론트엔드 프로젝트를 리드하며, 아키텍처 설계부터 성능 최적화, SEO까지 전반적인 프론트엔드 개발을 수행하고 있습니다.
+또한 기존 담당자가 개발한 지도 기반 부동산 플랫폼 Prime을 인수해 유지보수와 기능 확장을 맡고 있습니다. 기존 JavaScript 코드의 구조와 데이터 흐름을 파악한 뒤 FSD·TypeScript로 마이그레이션하고, 지도 데이터 동기화와 개발구역·교통망 편집 기능을 개선했습니다.
 
 ## Tech Stack
 
@@ -23,6 +24,8 @@ Next.js 15 / React 19 / TypeScript 기반의 프론트엔드 엔지니어입니�
 - 공통 모듈 설계 (인증, 권한, 테이블, WebView Bridge)
 - 이미지/폰트 70% 이상 경량화, Lighthouse 95점 달성
 - SEO 구현 (Dynamic Metadata, JSON-LD, Sitemap)
+- 기존 담당자가 개발한 Prime 프론트엔드 인수, 유지보수 및 FSD·TypeScript 마이그레이션
+- Prime 지도 데이터 동기화 개선, 개발구역·이미지 오버레이·교통망 편집 및 저장 실패 복원 기능 개발
 
 ### Surromind (2025.01 ~ 2025.05) — DX팀 연구원
 
@@ -41,12 +44,25 @@ Next.js 15 / React 19 / TypeScript 기반의 프론트엔드 엔지니어입니�
 
 ## Projects
 
-### Document Chat — AI RAG 챗봇
+### Prime — 지도 기반 부동산·개발사업 플랫폼
 
-Next.js 15 · React 19 · LangChain · Supabase · Zustand
+2026.02.25 ~ 현재
 
-PDF 업로드 → 벡터 임베딩(3072차원) → HNSW 검색 → LLM 응답 파이프라인 구현.
-멀티 유저 격리(RLS), 세션 관리, 크레딧 시스템 포함.
+React 18 · TypeScript · Redux Toolkit · Naver Maps API · Tailwind CSS · Axios
+
+기존 JavaScript 서비스를 FSD 6개 계층과 TypeScript로 마이그레이션.
+토지·매물 탐색, 개발구역 관리, 지도 이미지 오버레이 및 교통망 편집 기능 개발.
+지도 뷰포트 상태 동기화 액션을 이벤트당 3회에서 1회로 통합하고,
+마커 갱신 오류 수정 및 교통망 임시저장·실패 복원 기능 구현.
+
+### Document Chat — RAG 스터디·토이 프로젝트
+
+Next.js 15 · React 19 · TypeScript · Vercel AI SDK · Supabase · Zustand
+
+RAG와 LLM 애플리케이션 개발을 공부하고 학습 내용을 PDF 질의응답 웹앱으로 구현한 개인 프로젝트.
+페이지별 텍스트 추출·임베딩·벡터 검색·답변 생성을 연결하고,
+초기 ChromaDB 버전에서 5개 유형의 질문 20개로 Top-K 6·10 평가 실험 기록.
+이후 Supabase pgvector·Storage로 전환하고 대화 히스토리, 인증 및 API 사용량 기록을 실습.
 
 ### 한조각 Homepage — 의료기기 투자 플랫폼
 
@@ -82,4 +98,3 @@ Next.js 14 · Zustand · Alova · Ant Design
 문서 업로드 및 OCR 처리, 한글 검색 정규화(NFD), 역할 관리, 드래그 앤 드롭 우선순위 관리.
 
 ---
-

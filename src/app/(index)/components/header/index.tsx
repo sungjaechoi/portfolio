@@ -19,7 +19,7 @@ function Header() {
       </div>
       <div>
         <ul className="flex max-md:justify-center max-md:py-5">
-          <li className="relative p-2 pt-0 flex items-center justify-center hover:font-bold transition-all">
+          {/* <li className="relative p-2 pt-0 flex items-center justify-center hover:font-bold transition-all">
             <Link
               href={"https://velog.io/@sungjaechoi39/posts"}
               target="_blank"
@@ -27,7 +27,7 @@ function Header() {
             >
               블로그
             </Link>
-          </li>
+          </li> */}
           <li className="relative p-2 pt-0 hover:font-bold transition-all">
             <Link
               href={"https://github.com/sungjaechoi"}
@@ -45,7 +45,7 @@ function Header() {
       {mailToggle &&
         createPortal(
           <EmailForm onEmailToggle={onEmailToggle}></EmailForm>,
-          document.body
+          document.body,
         )}
     </header>
   );

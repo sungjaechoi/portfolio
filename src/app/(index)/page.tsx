@@ -1,7 +1,8 @@
 import Link from "next/link";
 import TopButton from "./components/top-button";
+import PrimeProject from "./components/prime-project";
+import DocumentChatProject from "./components/document-chat-project";
 import { FaLink } from "react-icons/fa";
-import { FaSquareGithub } from "react-icons/fa6";
 
 export default function Home() {
   return (
@@ -26,15 +27,25 @@ export default function Home() {
                   높이는 데 집중합니다.
                 </p>
                 <p className="pb-2">
-                  현재 리턴플러스에서 Next.js 15 기반의 프론트엔드 3개
-                  프로젝트(홈페이지·WebView 앱·관리자 대시보드)를 아키텍처
-                  설계부터 기능 개발까지 리딩하고 있습니다.
+                  현재 리턴플러스에서 Next.js 15 기반의 한조각 홈페이지·WebView
+                  앱·관리자 대시보드 3개 프로젝트를 아키텍처 설계부터 기능
+                  개발까지 리딩하고 있습니다.
                   <br />
                   이미지·폰트 최적화로 로딩 성능을 개선했고,
                   메타데이터·JSON-LD·사이트맵 등 SEO 요소를 적용해 검색 친화적
                   구조를 구축했습니다. 또한 권한/라우팅을 역할 기준으로
                   설계하고, 관리자에서는 TanStack Table 기반 데이터 테이블을
                   구현해 운영에 필요한 화면을 안정적으로 제공했습니다.
+                </p>
+                <p className="pb-2">
+                  또한 기존 담당자가 개발한 지도 기반 부동산 플랫폼 Prime을
+                  인수해 유지보수와 기능 확장을 맡고 있습니다.
+                  <br />
+                  기존 JavaScript 코드의 구조와 데이터 흐름을 파악한 뒤,
+                  FSD·TypeScript로 마이그레이션하며 도메인 모델·API·화면 조합의
+                  책임을 정리했습니다. 지도 마커와 데이터 동기화 문제를 개선하고
+                  개발구역·교통망 편집 기능을 확장하면서, 기존 코드를 이해하고
+                  개선하는 경험을 쌓았습니다.
                 </p>
                 <p className="pb-2">
                   Claude Code를 활용해 LLM 기반 개발 워크플로우를 설계·운영하며,
@@ -110,214 +121,9 @@ export default function Home() {
             </div>
             <div className="py-10">
               <ul className="flex flex-col gap-20">
-                {/* Document Chat - AI RAG 챗봇 */}
-                <li className="flex gap-8 max-md:flex-col">
-                  <div className="sticky top-[148px] h-[174px] text-2xl font-semibold basis-1/4 max-md:text-center max-md:static">
-                    <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
-                      AI RAG 챗봇
-                    </span>
-                    <p>Document Chat</p>
-                    <ul className="font-thin text-base break-all">
-                      <li>
-                        Next.js 15, React 19, LangChain, Supabase, Zustand
-                      </li>
-                      <li className="flex max-md:justify-center items-center gap-4 py-4">
-                        <Link
-                          href={"https://chatbot-zeta-five-34.vercel.app/"}
-                          target="_blank"
-                        >
-                          <FaLink size={30}></FaLink>
-                        </Link>
-                        <Link
-                          href={"https://github.com/sungjaechoi/chatbot"}
-                          target="_blank"
-                        >
-                          <FaSquareGithub size={38}></FaSquareGithub>
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="flex flex-col gap-10 basis-3/4">
-                    <div>
-                      <p className="py-2 leading-relaxed">
-                        PDF를 업로드하면 문서 기반 대화가 가능한 RAG 챗봇.
-                        Vercel 배포 제약(4.5MB)을 Storage 직접 업로드로
-                        우회하고, HNSW 인덱스 기반 벡터 검색과 RLS 데이터 격리로
-                        멀티유저 환경의 문서 QA 서비스를 구현
-                      </p>
-                    </div>
-                    <div>
-                      <div className="text-sm px-2 py-1 text-center italic">
-                        주요 기능
-                      </div>
-                      <ul className="list-disc list-inside space-y-1">
-                        <li>
-                          문서 업로드 및 인덱싱 — PDF 페이지별 텍스트 추출 후
-                          text-embedding-3-large(3072차원) 벡터 임베딩 생성,
-                          업로드/임베딩 단계별 로딩 상태 표시
-                        </li>
-                        <li>
-                          문서 기반 채팅 — HNSW 인덱스 + 코사인 유사도 Top-10
-                          검색으로 관련 컨텍스트 추출, Vercel AI SDK + Gemini
-                          2.5 Flash로 답변 생성, 출처 페이지 번호 제공
-                        </li>
-                        <li>
-                          세션 관리 — 1개 PDF에서 주제별 대화 세션
-                          생성·전환·삭제, 세션별 최근 10건 대화 히스토리를
-                          프롬프트에 결합하여 맥락 유지
-                        </li>
-                        <li>
-                          인증 및 보안 — Google OAuth + Supabase Auth 연동,
-                          Next.js 미들웨어 라우트 보호, 6개 테이블에 RLS 정책
-                          적용으로 사용자별 데이터 완전 격리
-                        </li>
-                        <li>
-                          크레딧 시스템 — Vercel AI Gateway의 호출 전/후
-                          total_used 차이로 토큰 비용 산출, fire-and-forget
-                          비동기 로깅으로 응답 지연 없이 사용량 추적
-                        </li>
-                      </ul>
-                    </div>
-                    <div>
-                      <div className="text-sm px-2 py-1 text-center italic">
-                        트러블슈팅
-                      </div>
-                      <ul className="list-disc list-inside space-y-1">
-                        <li>
-                          <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
-                            [문제]
-                          </span>
-                          Vercel API 라우트 body 크기 제한(4.5MB)으로 대용량 PDF
-                          업로드 실패, 서버리스 환경에서 3072차원 임베딩
-                          생성까지 대기 시간 발생
-                        </li>
-                        <li>
-                          <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
-                            [해결]
-                          </span>
-                          클라이언트 → Supabase Storage 직접 업로드(10MB)로 body
-                          limit 우회 후 API에 메타데이터만 전송. 임베딩 생성은
-                          서버에서 처리하며, 업로드 중/임베딩 중/완료 3단계
-                          상태를 Zustand로 관리하여 사용자에게 현재 처리 단계
-                          표시
-                        </li>
-                        <li>
-                          <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
-                            [문제]
-                          </span>
-                          페이지 단위 청킹에서 관련 없는 컨텍스트가 Top-K에
-                          포함되어 답변 품질 저하
-                        </li>
-                        <li>
-                          <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
-                            [해결]
-                          </span>
-                          HNSW 인덱스(vector_cosine_ops) 적용으로 검색 성능
-                          확보, Top-10 유사도 결과와 최근 대화 히스토리 10건을
-                          결합한 프롬프트 구성으로 정확도 향상. 출처 페이지
-                          번호를 함께 제공하여 답변 신뢰성 강화
-                        </li>
-                        <li>
-                          <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
-                            [문제]
-                          </span>
-                          크레딧 사용량 로깅이 API 응답을 블로킹하여 채팅 응답
-                          지연 발생
-                        </li>
-                        <li>
-                          <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
-                            [해결]
-                          </span>
-                          fire-and-forget IIFE 패턴으로 크레딧 로깅을 비블로킹
-                          처리, 응답 반환 후 비동기로 Vercel AI Gateway 비용
-                          산출 및 DB 기록. 실패 시 catch 로깅만 수행하여 사용자
-                          경험에 영향 없도록 설계
-                        </li>
-                      </ul>
-                    </div>
-                    <div>
-                      <div className="text-sm px-2 py-1 text-center italic">
-                        성과
-                      </div>
-                      <ul className="list-disc list-inside space-y-1">
-                        <li>
-                          PDF 추출 → 임베딩(3072차원) → HNSW 벡터 검색 → LLM
-                          답변 생성까지 end-to-end RAG 파이프라인 설계 및 Vercel
-                          서버리스 환경에 안정적 배포
-                        </li>
-                        <li>
-                          Container/View 패턴으로 UI/로직 분리, 5개 독립 Zustand
-                          스토어로 관심사별 상태 관리 아키텍처 구축
-                        </li>
-                        <li>
-                          Supabase의 PostgreSQL + pgvector + Storage + Auth를
-                          단일 플랫폼에서 통합 운영, 6개 테이블 RLS 정책으로
-                          멀티테넌트 데이터 격리 구현
-                        </li>
-                      </ul>
-                    </div>
-                    <div>
-                      <div className="flex flex-col gap-5">
-                        <div className="text-sm px-2 py-1 text-center italic">
-                          회고
-                        </div>
-                        <div>
-                          <div className="font-bold mb-4">배운 점</div>
-                          <ul className="list-inside list-disc flex flex-col gap-2">
-                            <li>
-                              <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
-                                [RAG 파이프라인 설계와 트레이드오프]
-                              </span>
-                              페이지 단위 청킹의 구현 단순성과 문맥 끊김
-                              리스크를 비교 검토하고, HNSW 인덱스 선택(검색 속도
-                              vs 인덱스 빌드 비용), Top-K 값 튜닝,
-                              temperature(0.3) 설정 등 각 단계의 의사결정 근거를
-                              체득. 향후 MMR/Rerank 적용과 chunk overlap
-                              도입으로 검색 품질 개선 계획
-                            </li>
-                            <li>
-                              <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
-                                [서버리스 환경에서의 비동기 처리 설계]
-                              </span>
-                              Vercel 서버리스에서는 background job이
-                              불가능하므로, fire-and-forget IIFE 패턴으로
-                              비블로킹 로깅을 구현하고 응답 후 비동기 처리하는
-                              구조를 설계. 서버리스의 제약 안에서 사용자 경험을
-                              우선한 아키텍처 판단 경험
-                            </li>
-                            <li>
-                              <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
-                                [Supabase RLS 기반 보안 설계]
-                              </span>
-                              auth.uid() 기반 행 수준 보안 정책을 6개
-                              테이블(profiles, chat_sessions, chat_messages,
-                              pdf_documents, storage.objects,
-                              credit_usage_logs)에 적용하며, 정책 누락 시 데이터
-                              노출 리스크와 과도한 정책의 성능 영향을 균형 있게
-                              설계하는 경험 습득
-                            </li>
-                          </ul>
-                        </div>
-                        <div>
-                          <div className="font-bold mb-4">개발 방식</div>
-                          <ul className="list-inside list-disc flex flex-col gap-2">
-                            <li>
-                              <span className="text-sm p-1 mr-1 bg-[#55501a] text-white rounded-sm">
-                                [Claude Code 에이전트 파이프라인]
-                              </span>
-                              5개 전문 에이전트(Orchestrator,
-                              Schema/Backend/Frontend Developer, Reviewer)를
-                              역할별로 구성하고, 요구사항 분석 → 스키마 설계 →
-                              구현 → 자동 리뷰(PASS/FAIL) → 실패 시 재작업(최대
-                              2회) 루프를 포함한 파이프라인으로 개발 프로세스
-                              자동화
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
+                <PrimeProject />
+
+                <DocumentChatProject />
 
                 {/* 한조각 홈페이지 */}
                 <li className="flex gap-8 max-md:flex-col">
@@ -413,7 +219,7 @@ export default function Home() {
                           Next.js Metadata API로 서버사이드 메타데이터 생성,
                           JSON-LD 구조화 데이터 구현, 동적 Sitemap.xml 자동
                           생성. 구글 &quot;한조각&quot; 브랜드명 검색 시 상위
-                          노출 (Search Console 기준, 2025년 10월)
+                          노출 (Search Console 기준, 2026년 10월)
                         </li>
                       </ul>
                     </div>
@@ -429,7 +235,7 @@ export default function Home() {
                         <li>Lighthouse SEO 점수 95/100</li>
                         <li>
                           구글 &quot;한조각&quot; 브랜드명 검색 시 상위 노출
-                          (Search Console 기준, 2025년 10월)
+                          (Search Console 기준, 2026년 10월)
                         </li>
                       </ul>
                     </div>
@@ -1538,7 +1344,7 @@ export default function Home() {
                   <div className="sticky top-[148px] h-[174px] text-2xl font-semibold  basis-1/4 max-md:text-center max-md:static">
                     <p>(주)리턴플러스</p>
                     <ul className="font-thin text-base">
-                      <li>2025.05 - 현재</li>
+                      <li>2025.05 - 2026.10</li>
                       <li>개발팀 - 전임(프론트엔드 리드)</li>
                     </ul>
                   </div>
@@ -1546,8 +1352,8 @@ export default function Home() {
                   <div className="flex flex-col gap-10  basis-3/4">
                     <div>
                       <p className="pb-4 leading-relaxed">
-                        Next.js 15 기반의 홈페이지·WebView 앱·관리자 대시보드
-                        3개 프론트엔드를 리드하며, 인증/권한/테이블/브릿지 같은
+                        Next.js 15 기반의 한조각 홈페이지·WebView 앱·관리자
+                        대시보드 3개 프론트엔드를 리드하며, 인증/권한/테이블/브릿지 같은
                         핵심 공통 영역을 모듈화해 제품 간 재사용 구조를
                         만들었습니다. 이미지·폰트 최적화로 초기 로딩 체감 성능을
                         개선했고, 메타데이터·구조화 데이터·사이트맵 자동화로
@@ -1557,6 +1363,13 @@ export default function Home() {
                         대응, TypeScript 조건부 타입 기반 타입 안전한 브릿지
                         통신 등 WebView 앱 특성에 맞는 아키텍처를 설계해
                         안정성과 UX를 확보했습니다.
+                      </p>
+                      <p className="pb-4 leading-relaxed">
+                        기존 담당자가 개발한 지도 기반 부동산 플랫폼 Prime을
+                        인수해 유지보수와 기능 확장도 담당했습니다. 기존 코드의
+                        구조와 데이터 흐름을 파악한 뒤 FSD·TypeScript로
+                        마이그레이션하고, 지도 데이터 동기화 개선과
+                        개발구역·교통망 편집 기능 개발을 진행했습니다.
                       </p>
                     </div>
                     <div className="text-sm px-2 py-1 text-center italic">
@@ -1619,7 +1432,7 @@ export default function Home() {
                           </li>
                           <li>
                             구글 &quot;한조각&quot; 브랜드명 검색 시 상위 노출
-                            (Search Console 기준, 2025년 10월)
+                            (Search Console 기준, 2026년 10월)
                           </li>
                           <li>
                             관리자 대시보드 31개 모듈화된 API Hooks, 10개 이상
@@ -1627,6 +1440,67 @@ export default function Home() {
                           </li>
 
                           <li>런칭 준비 완료 (투자 유치 진행 중)</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div id="career-prime" className="flex scroll-mt-60 flex-col gap-2 md:scroll-mt-40">
+                      <div className="flex flex-col">
+                        <strong>지도 기반 부동산·개발사업 플랫폼 Prime</strong>
+                      </div>
+                      <div>
+                        <strong>역할</strong>
+                        <p className="mt-2 mb-4">
+                          기존 담당자가 개발한 React·JavaScript 프론트엔드를
+                          인수해 유지보수, 구조 개선과 기능 확장을 담당했습니다.
+                          지도 렌더링·Redux 상태·API 연동 흐름을 파악하고,
+                          도메인과 기능별 책임을 정리하며 FSD·TypeScript
+                          마이그레이션을 진행했습니다.
+                        </p>
+                      </div>
+                      <div>
+                        <strong>주 업무내용</strong>
+                        <ul className="list-disc list-inside space-y-1">
+                          <li>
+                            컴포넌트·유틸리티·전역 상태 중심의 기존 구조를 FSD
+                            6개 계층으로 재구성하고, 도메인 모델·API·데이터 파싱과
+                            화면 조합의 책임 분리
+                          </li>
+                          <li>
+                            Naver Maps 기반 지도에서 줌 단계별 데이터 조회,
+                            최신 요청 반영, 마커 재사용과 수정 정보 동기화 개선
+                          </li>
+                          <li>
+                            개발구역 등록·수정·삭제, Polygon·MultiPolygon 표시,
+                            사업 이미지 오버레이 이동·회전·크기 조절 기능 개발
+                          </li>
+                          <li>
+                            도로·지하철 노선과 역 정보 편집, 수동 임시저장 및
+                            서버 저장 실패 시 작업 복원 기능 구현
+                          </li>
+                          <li>
+                            FSD 의존성·포맷·린트·타입 검사를 로컬 푸시 전 검증에
+                            연결하고, 주요 API 파서와 업무 규칙의 회귀 테스트 구성
+                          </li>
+                        </ul>
+                      </div>
+                      <div>
+                        <strong>성과</strong>
+                        <ul className="list-disc list-inside space-y-1">
+                          <li>
+                            기존 JavaScript 애플리케이션을 TypeScript 기반 FSD
+                            구조로 전환하고, 공개 진입점과 계층별 의존성 규칙을
+                            검사하는 개발 기준 마련
+                          </li>
+                          <li>
+                            지도 중심·줌·경계 갱신을 하나의 액션으로 통합해
+                            뷰포트 상태 동기화 dispatch를 이벤트당 3회에서 1회로
+                            축소
+                          </li>
+                          <li>
+                            매물 수정 후 마커에 이전 정보가 남는 문제를 해결하고,
+                            사용자 응답·API 설정·개발구역 규칙 등 22개 회귀
+                            테스트 케이스 구성
+                          </li>
                         </ul>
                       </div>
                     </div>
