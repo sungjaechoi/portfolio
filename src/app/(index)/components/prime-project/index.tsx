@@ -1,3 +1,7 @@
+import Link from "next/link";
+import { FaLink } from "react-icons/fa";
+import { FaSquareGithub } from "react-icons/fa6";
+
 const features = [
   {
     title: "기존 서비스 FSD·TypeScript 마이그레이션",
@@ -147,6 +151,16 @@ export default function PrimeProject() {
         <ul className="space-y-1 break-words text-base font-thin">
           <li>React 18, TypeScript, Redux Toolkit</li>
           <li>Naver Maps API, Tailwind CSS, Axios</li>
+          <li className="flex items-center gap-4 py-4 max-md:justify-center">
+            <Link
+              href="https://prime2x.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="프라임 지분거래소"
+            >
+              <FaLink size={30} aria-hidden="true" />
+            </Link>
+          </li>
         </ul>
       </div>
 

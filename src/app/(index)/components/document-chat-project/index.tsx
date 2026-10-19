@@ -153,7 +153,8 @@ export default function DocumentChatProject() {
           <ul className="list-inside list-disc space-y-2">
             {studyTopics.map(({ title, description }) => (
               <li key={title}>
-                <strong className="font-semibold">{title}</strong> — {description}
+                <strong className="font-semibold">{title}</strong> —{" "}
+                {description}
               </li>
             ))}
           </ul>
@@ -185,7 +186,9 @@ export default function DocumentChatProject() {
         </div>
 
         <div>
-          <h5 className="px-2 py-1 text-center text-sm italic">실험과 결과물</h5>
+          <h5 className="px-2 py-1 text-center text-sm italic">
+            실험과 결과물
+          </h5>
           <ul className="list-inside list-disc space-y-2">
             <li>
               PDF 업로드 → 페이지별 텍스트 추출 → 임베딩 저장 → 관련 문맥 검색 →
@@ -206,15 +209,23 @@ export default function DocumentChatProject() {
             </caption>
             <thead>
               <tr className="border-b border-[#55501a]">
-                <th scope="col" className="py-2 pr-3 font-semibold">지표</th>
-                <th scope="col" className="px-2 py-2 font-semibold">Top-K 6</th>
-                <th scope="col" className="px-2 py-2 font-semibold">Top-K 10</th>
+                <th scope="col" className="py-2 pr-3 font-semibold">
+                  지표
+                </th>
+                <th scope="col" className="px-2 py-2 font-semibold">
+                  Top-K 6
+                </th>
+                <th scope="col" className="px-2 py-2 font-semibold">
+                  Top-K 10
+                </th>
               </tr>
             </thead>
             <tbody>
               {evaluationRows.map(({ metric, topK6, topK10 }) => (
                 <tr key={metric} className="border-b border-[#55501a]/20">
-                  <th scope="row" className="py-2 pr-3 font-normal">{metric}</th>
+                  <th scope="row" className="py-2 pr-3 font-normal">
+                    {metric}
+                  </th>
                   <td className="whitespace-nowrap px-2 py-2">{topK6}</td>
                   <td className="whitespace-nowrap px-2 py-2">{topK10}</td>
                 </tr>
