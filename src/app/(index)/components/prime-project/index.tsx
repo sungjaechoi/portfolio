@@ -150,10 +150,6 @@ export default function PrimeProject() {
         <ul className="space-y-1 break-words text-base font-thin">
           <li>React 18, TypeScript, Redux Toolkit</li>
           <li>Naver Maps API, Tailwind CSS, Axios</li>
-          <li className="pt-4 text-sm font-normal leading-relaxed">
-            <p>테스트 아이디: test@naver.com</p>
-            <p>비밀번호: 123123</p>
-          </li>
           <li className="flex items-center gap-4 py-4 max-md:justify-center">
             <Link
               href="https://prime2x.com/"
