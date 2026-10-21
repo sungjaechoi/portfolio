@@ -52,7 +52,7 @@ React 18 · TypeScript · Redux Toolkit · Naver Maps API · Tailwind CSS · Axi
 
 기존 JavaScript 서비스를 FSD 6개 계층과 TypeScript로 마이그레이션.
 토지·매물 탐색, 개발구역 관리, 지도 이미지 오버레이 및 교통망 편집 기능 개발.
-지도 뷰포트 상태 동기화 액션을 이벤트당 3회에서 1회로 통합하고,
+지도 중심·줌·경계를 함께 갱신하도록 뷰포트 상태 동기화 흐름을 정리하고,
 마커 갱신 오류 수정 및 교통망 임시저장·실패 복원 기능 구현.
 
 ### Document Chat — RAG 스터디·토이 프로젝트

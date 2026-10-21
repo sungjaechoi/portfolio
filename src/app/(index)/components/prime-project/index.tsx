@@ -51,7 +51,7 @@ const troubleshooting = [
     solution:
       "표시 단위가 바뀔 때만 전체 마커를 재구성하고, 기존 마커는 ID 기준으로 재사용하도록 개선. 현재 줌에 맞는 응답이 도착할 때까지 기존 표시를 유지하고, 요청 ID를 비교해 최신 응답만 반영. 지도 중심·줌·경계 갱신도 하나의 액션으로 통합.",
     result:
-      "지도 이동에 따른 마커 유지·교체 기준을 명확히 하고, 뷰포트 상태 동기화 액션을 이벤트당 3회에서 1회로 축소.",
+      "지도 이동에 따른 마커 유지·교체 기준을 명확히 하고, 지도 중심·줌·경계를 함께 갱신하도록 상태 동기화 흐름 정리.",
   },
   {
     title: "매물 수정 후 마커와 상세 패널에 이전 정보가 남는 문제",
@@ -77,12 +77,12 @@ const achievements = [
   {
     title: "기존 JavaScript 애플리케이션을 FSD·TypeScript로 전환",
     description:
-      "84개 JavaScript 앱 파일로 구성된 기존 코드를 미사용 코드 정리와 책임 분리를 거쳐 114개 TypeScript/TSX 파일로 재구성. 마이그레이션 완료 시점의 앱 소스에서 JavaScript 파일 제거.",
+      "기존 JavaScript 코드를 TypeScript 기반 FSD 구조로 전환. 미사용 코드를 정리하고 도메인·사용자 기능·화면 조합의 책임과 의존 관계를 명확히 구성.",
   },
   {
-    title: "지도 상태 동기화 액션 3회 → 1회",
+    title: "지도 상태 동기화 흐름 정리",
     description:
-      "지도 중심·줌·경계를 단일 액션에서 함께 갱신하도록 변경해 동일 이벤트의 상태 동기화 dispatch 수를 약 67% 축소.",
+      "지도 중심·줌·경계를 함께 갱신하도록 통합해 연관된 뷰포트 상태를 일관되게 관리.",
   },
   {
     title: "회귀 테스트 5개 파일·22개 케이스 구성",
@@ -150,6 +150,10 @@ export default function PrimeProject() {
         <ul className="space-y-1 break-words text-base font-thin">
           <li>React 18, TypeScript, Redux Toolkit</li>
           <li>Naver Maps API, Tailwind CSS, Axios</li>
+          <li className="pt-4 text-sm font-normal leading-relaxed">
+            <p>테스트 아이디: test@naver.com</p>
+            <p>비밀번호: 123123</p>
+          </li>
           <li className="flex items-center gap-4 py-4 max-md:justify-center">
             <Link
               href="https://prime2x.com/"
@@ -224,11 +228,6 @@ export default function PrimeProject() {
               </li>
             ))}
           </ul>
-          <p className="mt-4 text-sm leading-relaxed">
-            ※ 파일 수는 2026.08.07 마이그레이션 전후 기준이며 테스트·타입
-            선언·개발 프록시 파일은 제외. 액션 감소율은 뷰포트 상태 동기화
-            dispatch 수 기준.
-          </p>
         </div>
 
         <div className="flex flex-col gap-5">
