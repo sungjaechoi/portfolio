@@ -93,12 +93,13 @@ export default function DocumentChatProject() {
     >
       <div className="sticky top-[148px] min-w-0 basis-1/4 self-start text-2xl font-semibold max-md:static max-md:w-full max-md:text-center">
         <span className="inline-block rounded-sm bg-[#55501a] p-1 text-sm text-white">
-          RAG 스터디 · 토이 프로젝트
+          Agentic Coding · RAG 스터디 · 토이 프로젝트
         </span>
         <h4>Document Chat</h4>
         <ul className="space-y-1 break-words text-base font-thin">
           <li>Next.js 15, React 19, TypeScript</li>
           <li>Vercel AI SDK, Supabase, Zustand</li>
+          <li>Claude Code,Sub-agent</li>
           <li className="flex items-center gap-4 py-4 max-md:justify-center">
             <Link
               href="https://chatbot-zeta-five-34.vercel.app/"
